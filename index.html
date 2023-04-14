@@ -7,25 +7,43 @@
 
       header{
         height:30%;
-      width:100%;}
+      width:100%;
+    }
 
       nav,section{
         height:70%;
         float:left;}
 
-      nav{
-      width:25%;}
+      nav{border-style: solid;
+        border-color: orange;
+        border-width : 2px;
+	    background : orange;
+      width:15%;
+      margin-right:20px;
+      }
 
-      section{  
 
+      section{ 
+     width:75%;}
 
-      width:75%;}
+     article{
+      position: absolute;
+      right:50px;
+      bottom: 50px;
+     }
 
       .linkk{
         position: absolute;
         bottom: 0;
       }
       
+      .newst{color:white;}
+      .newstt{text-align: center;
+        width:650px; background-color: navy;}
+    
+      table { margin : 0 auto;}
+
+
     </style>
  </head>        
 <body>
@@ -38,12 +56,27 @@ Tottemham
     </header>
   
     <nav>
-<h4>menu</h4>
-    <ul>
-      <li>22-23 Season</li> 
-      <li>Record</li>
-      <li>etc</li>
+<div style="text-align: center;"><h3>menu</h3></div>  
+    <ul class="menu">
+      <li><a href="#"><h3>22-23 Season</h3></a></li>
+      <ul class="submenu">
+        <li><a href="#">구단 순위</a></li>
+        <li><a href="#">경기 일정</a></li>
+        <li><a href="#">선수단</a></li>
+      </ul> 
+      <li><a href="#"><h3>Record</h3></a></li>
+      <ul class="submenu">
+        <li><a href="#">역대 클럽 성적</a></li>
+        <li><a href="#">개인 기록</a></li>
+        <li><a href="#">라이벌 매치</a></li>
+      </ul>
+      <li><a href="#"><h3>etc</h3></a></li>
+      <ul class="submenu">
+        <li><a href="#">설문 조사</a></li>
+        <li><a href="#">퀴즈</a></li>
+      </ul>
     </ul>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <div class="linkk">
     <p><h5>공식 웹사이트</h5></p>
     <a href="https://www.tottenhamhotspur.com/" target="_blank">
@@ -54,18 +87,27 @@ Tottemham
                 <img src="https://i.namu.wiki/i/_MseEhfdkHvNrbrSputFHzwAyr2dDtTa8AjAehzm43rqG5I8EHA0HwvMytIisERgU9qsph5IRiq7ngLis3Pxjw.svg"width="30"height="30"></a>
                 <a href="https://www.instagram.com/spursofficial/" target="_blank">
                     <img src="https://i.namu.wiki/i/fyltiAJ8Y2fp6lwQBF5kuEc4eG1XG9PithiUA5P7XRGoT3dOk5qRzi8jmZRIEUOFis1d9ehdMyXc_Vn2jJh1rEX3spsEO_gidY6aksLMDTaa5vvETOMqhHA0MhP0M68QXxfoTf4Y4Ak0esYgP1ooAQ.svg"width="30"height="30"></a>
+                    <a href="https://www.youtube.com/spursofficial" target="_blank">
+                      <img src="https://i.namu.wiki/i/PtiBJgkMMXPHs9VZGFRTuCR8WnyaAvcKXmZje_YlLT-_CvNLndtwIX6sp2hixZCH3IXPLofWnGAGdG6E1hGfbw.svg"width="30"height="30"></a>
             </div>
   </nav>
  
   <section>
-    <article style="float:left; margin-right:50px;">
-  <a href="https://www.ytn.co.kr/_ln/0107_201812061030083239" target="_blank">
-  <img src="https://image.ytn.co.kr/general/jpg/2018/1206/201812061030083239_d.jpg"width="350" height="350"alt="son"></a>
-   <p style = "margin-top:10px;"><strong>손흥민 EPL 100호골 달성</strong></p></div></article>
     <article>
+    <table class="newstt">
+      <tr><td><h2><span class="newst">NEWS</span></h2></td></tr>
+    </table>
+    <table>
+   <tr><td><div style="float:left; margin-right:40px;">
+  <a href="https://www.ytn.co.kr/_ln/0107_201812061030083239" target="_blank">
+  <img src="https://image.ytn.co.kr/general/jpg/2018/1206/201812061030083239_d.jpg"width="300" height="300"alt="son"></a>
+   <p style = "margin-top:10px; text-align: center;"><strong>손흥민 EPL 100호골 달성</strong></p></div></td> 
+    <td><div>
   <a href="https://www.nocutnews.co.kr/news/5804893" target="_blank">
-  <img src="https://file2.nocutnews.co.kr/newsroom/image/2022/08/20/202208202252080119_0.jpg"width="350"height="350"alt="kane"></a>
-  <p style = "margin-top:10px;"><strong>해리케인 EPL 단일팀 최다골 기록</strong></p></div>
+  <img src="https://file2.nocutnews.co.kr/newsroom/image/2022/08/20/202208202252080119_0.jpg"width="300"height="300"alt="kane"></a>
+  <p style = "margin-top:10px; text-align: center;"><strong>해리케인 EPL 단일팀 최다골 기록</strong></p>
+</td></tr></table>
+</div>
 </article>  
 </section>
 
