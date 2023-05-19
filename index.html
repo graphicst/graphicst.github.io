@@ -42,7 +42,12 @@
 	      background : orange;
         background-size : 70%;
         width:230px;
-        margin-right:20px;
+        margin-right:25px;
+      }
+
+      ul {
+        list-style-type: none;
+        text-decoration: none;
       }
 
 
@@ -50,11 +55,19 @@
         display: flex;
         width : 1390px;}
 
+    
+
      article{
        position: absolute;
        right:30px;
        bottom: 50px;
      }
+
+     .highlight{
+      position : absolute;
+      bottom: 50px;
+     }
+     
 
      .sloganbox{
       float:right;
@@ -82,8 +95,13 @@
         margin-top : 20px;
         margin-left : 10px;}
       
-      .newstt{text-align: center;
-        width:650px; background-color:#000050;}
+      .newstt{
+        text-align: center;
+        width:650px; background-color:#2e2e72;}
+
+      .high{
+        text-align: center;
+        width:400px; background-color:#2e2e72;}
     
       table { margin : 0 auto;}
 
@@ -103,19 +121,19 @@
     <br>
     <ul class="menu">
       <li><a href="index.html"><h3>HOME</h3></a></h3></li><br>
-      <li><a href="ranking.html"><h3>22-23 Season</h3></a></li>
+      <li><h3>22-23 Season</h3></li>
       <ul class="submenu">
         <li><a href="ranking.html">구단 순위</a></li>
               <li><a href="schedule.html">경기 일정</a></li>
               <li><a href="squad.html">선수단</a></li><br>
             </ul> 
-        <li><a href="club_record.html"><h3>Record</h3></a></li>
+        <li><h3>Record</h3></li>
             <ul class="submenu">
               <li><a href="club_record.html">역대 클럽 성적</a></li>
               <li><a href="player_record.html">개인 기록</a></li>
               <li><a href="rival.html">라이벌 매치</a></li><br>
             </ul>
-        <li><a href="survey.html"><h3>etc</h3></a></li>
+        <li><h3>etc</h3></li>
             <ul class="submenu">
               <li><a href="survey.html">설문 조사</a></li>
               <li><a href="quiz.html">퀴즈</a></li>
@@ -138,21 +156,27 @@
   </nav>
  
   <section>
-    <div class="intro">
-      <img src="https://github.com/graphicst/graphicst.github.io/blob/main/Premier-League-Transparent.png?raw=true" width="150" height="150">
-    <p>
-      팀명 : 토트넘 핫스퍼<br>
-      리그 : 잉글랜드 프리미어 리그<br>
-      연고지 : 런던<br>
-      </p>
-    </div>
-   
+    
+  <div class="highlight">
+    <table class="high">
+      <tr><td><h2><span style="color:white;">손흥민 하이라이트</span></h2></td></tr>
+    </table>
+    
+    <table>
+      <tr><td><div style="float:left;">
+        <a href="https://www.youtube.com/watch?v=FRF7f3GUYVY" target="_blank">
+        <img src="https://i.ytimg.com/vi/FRF7f3GUYVY/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAOtgj9ecWh-nq8ipDDOh_zYO2TGA"width="400" height="300"alt="하이라이트"></a>
+        <p style = "margin-top:10px; text-align: center;"><strong>VS 크리스탈 팰리스 (05.06)</strong></p></div></td> 
+      </tr>
+    </table>
+  </div>
 
     
     <article>
       <table class="newstt">
         <tr><td><h2><span style="color:white;">NEWS</span></h2></td></tr>
       </table>
+      
       <table>
         <tr><td><div style="float:left; margin-right:40px;">
           <a href="https://www.ytn.co.kr/_ln/0107_201812061030083239" target="_blank">
@@ -162,8 +186,9 @@
           <a href="https://www.nocutnews.co.kr/news/5804893" target="_blank">
           <img src="https://file2.nocutnews.co.kr/newsroom/image/2022/08/20/202208202252080119_0.jpg"width="300"height="300"alt="kane"></a>
           <p style = "margin-top:10px; text-align: center;"><strong>해리케인 EPL 단일팀 최다골 기록</strong></p>
-        </td></tr></table>
-        </div>
+        </td></tr></div>
+      </table>
+        
     </article>  
   </section>
 
