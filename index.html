@@ -5,9 +5,9 @@
     <link rel="icon" href="https://raw.githubusercontent.com/graphicst/graphicst.github.io/main/favicon.ico" type="image/x-icon">
     <style>
 
-
+      
       .logo{
-        width : 234px; height : 160px;}
+        width : 230px; height : 160px;}
       
       body {display :flex;
         flex-wrap: wrap;
@@ -35,23 +35,59 @@
         float:left;}
 
       nav{
+        
         position: relative;
-        border-style: solid;
-        border-color: orange;
-        border-width : 2px;
 	      background : orange;
-        background-size : 70%;
         width:230px;
         margin-right:25px;
       }
 
-      ul {
-        list-style-type: none;
-        text-decoration: none;
+      .menu {   
+      width: 230px;
+      overflow: hidden;
+      margin: 20px auto;
       }
+
+      *{padding:0;margin:0}  /* ul요소의 기본 마진과 패딩 값 제거 */
+      
+      li{list-style:none;}  /*list에 점 제거*/
+      
+      a{text-decoration:none;font-size:16px}
+
+      .menu > li {
+      width: 100%;
+      text-align: center;
+      line-height: 60px;    /*텍스트 줄간격 40px*/
+      background-color: orange;
+    }
+
+      .menu a {
+      color: navy;
+      font-weight: 1000;
+    }
+
+    .submenu > li {
+     line-height: 50px;
+     background-color: rgb(237, 208, 135);
+    }
+
+  .submenu {
+  height: 0;    /*ul의 높이를 안보이게 처리*/
+  overflow: hidden;     /*내용이 넘어갈 경우 안보이게 처리하는 코드 submenu를 안보이게*/
+  }
+
+  .menu > li:hover {
+  background-color: rgb(237, 208, 135);
+  }
+
+  .menu > li:hover .submenu {
+  height: 150px; /*서브메뉴 li한개의 높이 50*3*/
+  transition-duration: 1s;    /*submenu 나오는데 걸리는 시간*/
+  }
 
 
       section{ 
+        position: relative;
         display: flex;
         width : 1390px;}
 
@@ -59,26 +95,30 @@
 
      article{
        position: absolute;
-       right:30px;
-       bottom: 50px;
+       top: 100px;
+       left : 500px;
      }
 
      .highlight{
       position : absolute;
-      bottom: 50px;
+      top: 100px;
      }
      
 
      .sloganbox{
+      position: relative;
       float:right;
       background-color: navy;
-      width : 1420px;
+      width : 1422px;
       height : 150px;
   
    
      }
 
      .slogan{
+      position : absolute;
+      left: 450px;
+      top : 45px;
       font-family:"맑은 고딕";
       font-size:3em;
       font-weight:700;
@@ -97,11 +137,15 @@
       
       .newstt{
         text-align: center;
-        width:650px; background-color:#2e2e72;}
+        width:630px;
+        height : 60px;
+        background-color:#2e2e72;}
 
       .high{
         text-align: center;
-        width:400px; background-color:#2e2e72;}
+        height : 60px;
+        width:400px; 
+        background-color:#2e2e72;}
     
       table { margin : 0 auto;}
 
@@ -120,28 +164,31 @@
     <nav>  
     <br>
     <ul class="menu">
-      <li><a href="index.html"><h3>HOME</h3></a></h3></li><br>
-      <li><h3>22-23 Season</h3></li>
-      <ul class="submenu">
-        <li><a href="ranking.html">구단 순위</a></li>
-              <li><a href="schedule.html">경기 일정</a></li>
-              <li><a href="squad.html">선수단</a></li><br>
-            </ul> 
-        <li><h3>Record</h3></li>
-            <ul class="submenu">
-              <li><a href="club_record.html">역대 클럽 성적</a></li>
-              <li><a href="player_record.html">개인 기록</a></li>
-              <li><a href="rival.html">라이벌 매치</a></li><br>
-            </ul>
-        <li><h3>etc</h3></li>
-            <ul class="submenu">
-              <li><a href="survey.html">설문 조사</a></li>
-              <li><a href="quiz.html">퀴즈</a></li>
-      </ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="#">22-23 Season</a>
+        <ul class="submenu">
+          <li><a href="ranking.html">구단 순위</a></li>
+          <li><a href="schedule.html">경기 일정</a></li>
+          <li><a href="squad.html">선수단</a></li><br>
+        </ul> 
+      </li>
+      <li><a href="#">Record</a>
+        <ul class="submenu">
+          <li><a href="club_record.html">역대 클럽 성적</a>
+          <li><a href="player_record.html">개인 기록</a></li>
+          <li><a href="rival.html">라이벌 매치</a></li><br>
+        </ul>
+      </li>
+      <li><a href="#">etc</a>
+        <ul class="submenu">
+          <li><a href="survey.html">설문 조사</a></li>
+          <li><a href="quiz.html">퀴즈</a></li>
+        </ul>
+      </li>
     </ul>
     <br><br><br><br><br><br><br><br><br>
 <div class="linkk">
-    <p><h5>공식 웹사이트</h5></p>
+    <p><h5>공식 웹사이트</h5></p><br>
     <a href="https://www.tottenhamhotspur.com/" target="_blank">
         <img src="tothomeimg.svg"width="30"height="30"></a>
         <a href="https://twitter.com/spursofficial" target="_blank">
@@ -178,7 +225,7 @@
       </table>
       
       <table>
-        <tr><td><div style="float:left; margin-right:40px;">
+        <tr><td><div style="float:left; margin-right:20px;">
           <a href="https://www.ytn.co.kr/_ln/0107_201812061030083239" target="_blank">
           <img src="https://image.ytn.co.kr/general/jpg/2018/1206/201812061030083239_d.jpg"width="300" height="300"alt="son"></a>
           <p style = "margin-top:10px; text-align: center;"><strong>손흥민 EPL 100호골 달성</strong></p></div></td> 
