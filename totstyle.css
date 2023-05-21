@@ -1,143 +1,172 @@
-  
-      .logo{
-        width : 230px; height : 160px;}
-      
-      body {display :flex;
-        flex-wrap: wrap;
-        margin :0;
-        width : 1650px;
-        height: 950px;}
-
-     article.img:hover{
-        box-shadow :  0px 0px 25px yellow,
-        0 0 10px red,
-        2px 2px 2px black;}
-      
-      header{
-        display: flex;
-        height:150px;
-        width:100%;
-    }
-
-    span {color : orangered;}
-
-    
-
-      nav,section{
-        height:800px;
-        float:left;}
-
-      nav{
-        
-        position: relative;
-	      background : orange;
-        width:230px;
-      }
-
-      .menu {   
+  .logo {
       width: 230px;
-      overflow: hidden;
+      height: 160px;
+  }
+
+  body {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0;
+      width: 1650px;
+      height: 950px;
+  }
+
+  article.img:hover {
+      box-shadow: 0px 0px 25px yellow,
+          0 0 10px red,
+          2px 2px 2px black;
+  }
+
+  header {
+      display: flex;
+      height: 150px;
+      width: 100%;
+  }
+
+  span {
+      color: orangered;
+  }
+
+
+
+  nav,
+  section {
+      height: 800px;
+      float: left;
+  }
+
+  nav {
+    /* 자식요소에 position : absolute 를 적용하기 위해 부모요소를 relative로 */
+      position: relative;
+      background: orange;
+      width: 230px;
+  }
+
+  .menu {
+      width: 230px;
       margin: 20px auto;
-      }
+  }
 
-      *{padding:0;margin:0}  /* ul요소의 기본 마진과 패딩 값 제거 */
-      
-      li{list-style:none;}  /*list에 점 제거*/
-      
-      a{text-decoration:none;font-size:16px}
+  * {
+      /* ul요소의 기본 마진과 패딩 값 제거 */
+      padding: 0;
+      margin: 0
+  }
 
-      .menu > li {
+  li {
+    /*list에 점 제거*/
+      list-style: none;
+  }
+
+  
+  a {
+    /*하이퍼 링크 밑줄 제거*/
+      text-decoration: none;
+      font-size: 16px
+  }
+
+  .menu>li {
       width: 100%;
       text-align: center;
-      line-height: 60px;    /*텍스트 줄간격 40px*/
+      line-height: 60px;
       background-color: orange;
-    }
+  }
 
-      .menu a {
+  .menu a {
       color: navy;
       font-weight: 1000;
-    }
+  }
 
-    .submenu > li {
-     line-height: 50px;
-     background-color: rgb(237, 208, 135);
-    }
+  .submenu>li {
+      line-height: 50px;
+      background-color: rgb(237, 208, 135);
+  }
 
   .submenu {
-  height: 0;    /*ul의 높이를 안보이게 처리*/
-  overflow: hidden;     /*내용이 넘어갈 경우 안보이게 처리하는 코드 submenu를 안보이게*/
+      height: 0;
+      /*ul의 높이를 0으로 해서 submenu의 높이를 없애고*/
+      overflow: hidden;
+      /*내용이 넘어갈 경우 안보이게 처리하는 코드 submenu를 안보이게*/
   }
 
-  .menu > li:hover {
-  background-color: rgb(237, 208, 135);
+  .menu>li:hover {
+      background-color: rgb(237, 208, 135);
   }
 
-  .menu > li:hover .submenu {
-  height: 150px; /*서브메뉴 li한개의 높이 50*3*/
-  transition-duration: 1s;    /*submenu 나오는데 걸리는 시간*/
+  .menu>li:hover .submenu {
+      height: 150px;
+      /*서브메뉴 li한개의 높이 50*3*/
+      transition-duration: 1s;
+      /*submenu 나오는데 걸리는 시간*/
   }
 
 
-      section{ 
-        position: relative;
-        display: flex;
-        width : 1390px;}
-
-    
-
-     article{
-       position: absolute;
-       top: 100px;
-       left : 560px;
-     }
-
-     .highlight{
-      margin-left:80px;
-      position : absolute;
-      top: 100px;
-     }
-     
-
-     .sloganbox{
+  section {
       position: relative;
-      float:right;
+      display: flex;
+      width: 1390px;
+  }
+
+
+
+  article {
+      position: absolute;
+      top: 100px;
+      left: 560px;
+  }
+
+  .highlight {
+      position: absolute;
+      top: 100px;
+      left: 80px;
+  }
+
+
+  .sloganbox {
+      position: relative;
+      float: right;
       background-color: navy;
-      width : 1422px;
-      height : 150px;
-  
-   
-     }
+      width: 1422px;
+      height: 150px;
 
-     .slogan{
-      position : absolute;
+
+  }
+
+  .slogan {
+      position: absolute;
       left: 400px;
-      top : 45px;
-      font-family:"맑은 고딕";
-      font-size:3em;
-      font-weight:700;
-      color:white;
+      top: 45px;
+      font-family: "맑은 고딕";
+      font-size: 3em;
+      font-weight: 700;
+      color: white;
       text-align: center;
-     }
+  }
 
-      .linkk{
-        position: absolute;
-        bottom: 0;
-      }
+  .linkk {
+      position: absolute;
+      bottom: 0;
+  }
 
-      .intro {
-        margin-top : 20px;
-        margin-left : 10px;}
-      
-      .newstt{
-        text-align: center;
-        width:630px;
-        height : 60px;
-        background-color:#2e2e72;}
+  .intro {
+      margin-top: 20px;
+      margin-left: 10px;
+  }
 
-      .high{
-        text-align: center;
-        height : 60px;
-        width:400px; 
-        background-color:#2e2e72;}
-    
-      table { margin : 0 auto;}
+  .newstt {
+      text-align: center;
+      width: 630px;
+      height: 60px;
+      background-color: #2e2e72;
+  }
+
+  .high {
+      text-align: center;
+      height: 60px;
+      width: 400px;
+      background-color: #2e2e72;
+  }
+
+  table {
+      margin: 0 auto;
+  }
