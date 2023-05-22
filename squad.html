@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> 토트넘 핫스퍼 </title>
+    <link rel="icon" href="https://raw.githubusercontent.com/graphicst/graphicst.github.io/main/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="totstyle.css">
+
+    <style>
+    
+        .squad1 {
+          position : absolute;
+          top : 50px;
+          left : 80px;
+          height: 500px;
+          /*인접한 셀 테두리 겹쳐서 하나로, 셀 테두리 사이의 거리 0 */
+          border-collapse: collapse;
+          border-spacing: 0;
+        }
+    
+        .squad1 caption {
+          font-family: "맑은 고딕";
+          font-size: 20px;
+          font-weight: 5em;
+          margin-bottom: 15px;
+        }
+    
+         .squad1 td {
+          border-color: black;
+          border-style: solid;
+          border-width: 1px;
+          font-family: "맑은 고딕";
+          font-size: 14px;
+          font-weight: 2em;
+          text-align: center;
+          vertical-align: middle;
+        }
+    
+        .squad1 .photo {
+            width: 180px;
+            height : 90px;
+        }
+        
+        .squad1 .backnum {
+          background-color: navy;
+          color : white;
+          text-align: center;
+          vertical-align: middle;
+        }
+        
+        .squad1 .player{
+            color : blue;
+            font-weight: bold;
+        }
+        
+        .squad1 .pos {
+          color :red;
+          font-weight: bold;
+        }
+        
+    
+        .squad1 .prof {
+          color : black;
+        }
+    
+      </style>
+ </head>        
+<body>
+  <header>
+    <div class= "logo" >
+      <img src="https://github.com/graphicst/graphicst.github.io/blob/main/tot-logo.png?raw=true" width ="240" height ="160">
+    </div>
+    <div class="sloganbox"><p class="slogan"><span>C</span>OME <span>O</span>N <span>Y</span>OUR <span>S</span>PURS</p>
+    </div>
+  </header>
+  
+    <nav>  
+    <br>
+    <ul class="menu">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="ranking.html">2022/23 Season</a>
+        <ul class="submenu">
+          <li><a href="ranking.html">구단 순위</a></li>
+          <li><a href="schedule.html">경기 일정</a></li>
+          <li><a href="squad.html">선수단</a></li><br>
+        </ul> 
+      </li>
+      <li><a href="club_record.html">Record</a>
+        <ul class="submenu">
+          <li><a href="club_record.html">역대 클럽 성적</a>
+          <li><a href="player_record.html">개인 기록</a></li>
+          <li><a href="rival.html">라이벌 매치</a></li><br>
+        </ul>
+      </li>
+      <li><a href="survey.html">etc</a>
+        <ul class="submenu">
+          <li><a href="survey.html">설문 조사</a></li>
+          <li><a href="quiz.html">퀴즈</a></li>
+        </ul>
+      </li>
+    </ul>
+<div class="linkk">
+    <p><h4>공식 웹사이트</h4></p><br>
+    <a href="https://www.tottenhamhotspur.com/" target="_blank">
+        <img src="tothomeimg.svg"width="30"height="30"></a>
+        <a href="https://twitter.com/spursofficial" target="_blank">
+            <img src="tottwiimg.svg"width="30"height="30"></a>
+            <a href="https://www.facebook.com/TottenhamHotspur" target="_blank">
+                <img src="totfaceimg.svg"width="30"height="30"></a>
+                <a href="https://www.instagram.com/spursofficial/" target="_blank">
+                    <img src="totinsimg.svg"width="30"height="30"></a>
+                    <a href="https://www.youtube.com/spursofficial" target="_blank">
+                      <img src="totyouimg.svg"width="30"height="30"></a>
+            </div>
+  </nav>
+ 
+  <section>
+    <table class="squad1">
+        <caption>토트넘 1군 스쿼드</caption>
+        <colgroup>
+          <col style="width: 180px;">
+          <col style="width: 180px;">
+          <col style="width: 180px;">
+          <col style="width: 180px;">
+          <col style="width: 180px;">
+          <col style="width: 180px;">
+        </colgroup>
+        <tbody>
+          <tr class="photo">
+            <td><img src ="https://search.pstatic.net/common?type=b&size=216&expire=1&refresh=true&quality=100&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2F16%2F201806141742406301.jpg" width ="140px" height="90px"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>      
+          <tr class="backnum">
+            <td>1</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>9</td>
+          </tr>
+          <tr class="profile">
+            <td><span class="player">위고 요리스</span><br><span class ="pos">GK</span><br><span class="prof">프랑스<br>1986.12.26</span></td>
+            <td><span class="player">올리버 스킵</span><br><span class ="pos">MF</span><br><span class="prof">잉글랜드<br>2000.09.16</span></td>
+            <td><span class="player">피에르에밀 호이비에르</span><br><span class ="pos">MF</span><br><span class="prof">덴마크<br>1995.08.05</span></td>
+            <td><span class="player">다빈손 산체스</span><br><span class ="pos">DF</span><br><span class="prof">콜롬비아<br>1996.06.12</span></td>
+            <td><span class="player">손흥민</span><br><span class ="pos">FW</span><br><span class="prof">대한민국<br>1992.07.08</span></td>
+            <td><span class="player">히샬리송</span><br><span class ="pos">FW</span><br><span class="prof">브라질<br>1997.05.10</span></td>
+          </tr>
+          <tr class="photo">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr class="backnum">
+            <td>10</td>
+            <td>12</td>
+            <td>14</td>
+            <td>15</td>
+            <td>16</td>
+            <td>17</td>
+          </tr>
+          <tr class="profile">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr class="photo">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr class="backnum">
+            <td>19</td>
+            <td>20</td>
+            <td>21</td>
+            <td>23</td>
+            <td>25</td>
+            <td>27</td>
+          </tr>
+          <tr class="profile">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr class="photo">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr class="backnum">
+            <td>29</td>
+            <td>30</td>
+            <td>33</td>
+            <td>34</td>
+            <td>38</td>
+            <td>40</td>
+          </tr>
+          <tr class="profile">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr class="photo">
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr class="backnum">
+            <td>41</td>
+            <td>45</td>
+            <td>55</td>
+          </tr>
+          <tr class="profile">
+            <td>d</td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+
+      </table>
+  </section>
