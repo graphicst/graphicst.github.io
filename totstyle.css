@@ -11,23 +11,15 @@
       height: 950px;
   }
 
-  article.img:hover {
-      box-shadow: 0px 0px 25px yellow,
-          0 0 10px red,
-          2px 2px 2px black;
-  }
-
   header {
       display: flex;
       height: 150px;
       width: 100%;
   }
 
-  span {
+  .sslo {
       color: orangered;
   }
-
-
 
   nav,
   section {
@@ -36,7 +28,7 @@
   }
 
   nav {
-    /* 자식요소에 position : absolute 를 적용하기 위해 부모요소를 relative로 */
+      /* 자식요소에 position : absolute 를 적용하기 위해 부모요소를 relative로 */
       position: relative;
       background: orange;
       width: 230px;
@@ -54,13 +46,13 @@
   }
 
   li {
-    /*list에 점 제거*/
+      /*list에 점 제거*/
       list-style: none;
   }
 
-  
+
   a {
-    /*하이퍼 링크 밑줄 제거*/
+      /*하이퍼 링크 밑줄 제거*/
       text-decoration: none;
       font-size: 16px
   }
@@ -146,6 +138,7 @@
   .linkk {
       position: absolute;
       bottom: 0;
+      left: 5px;
   }
 
   .intro {
