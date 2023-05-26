@@ -9,20 +9,82 @@
 
     <style>
 
-    #calendar td{ 
-        font-size: 16px;
-        font-weight: 2em;
+    section{
+        display: flex;
+        flex-direction: column;
     }
+    
+    #calendar {
+        margin-top: 30px;
+        text-align: center;
+        width : 1390px;
+        height: 70px;
+    }
+    #calendarTitle{
+        font-size : 25px;
+        font-weight: bold;
+    }
+
+    hr{
+        border :0;
+        height: 10px;
+        background-color: navy;
+        margin-left: 20px;
+    }
+
+    #games{
+        display: flex;
+        width: 1300px;
+        margin-top: 20px;
+        margin-left: 20px;
+        font-size : 20px;
+        font-weight: bold;
+        line-height: 80px;
+    }
+
+    .gametitle{
+        color:red;
+        font-size: 25px;
+    }
+
+    #eplgames{
+        width : 600px;
+        text-align: center;
+    }
+
+    #cupgames{
+        width : 600px;
+        text-align: center;
+    }
+
+    .date{
+        color:blue;
+    }
+
+
     </style>
 
 <script>
+
     var today = new Date(); // 오늘 날짜를 가져옵니다.
 
+    function updategames() {
+        document.getElementById("eplgames").innerHTML ="";
+        document.getElementById("cupgames").innerHTML ="";
+        if((today.getFullYear()==2022) && (today.getMonth() +1)==8){
+        document.getElementById("eplgames").innerHTML ="<span class='gametitle'>잉글랜드 프리미어 리그</span> <br> <span class='date'>2022.8.6</span> 토트넘 4 vs 사우샘프턴 1 <br> <span class='date'>2022.8.15</span>  첼시 2 vs 토트넘 2 <br> <span class='date'>2022.8.20</span>  토트넘 1 vs 울브스 0 <br> <span class='date'>2022.8.29</span>  노팅엄 포레스트 0 vs 토트넘 2";
+        document.getElementById("cupgames").innerHTML ="<span class='gametitle'>챔피언스 리그 & 컵 대회</span>";
+        }
+        else if((today.getFullYear()==2022) && (today.getMonth() +1)==9){
+        document.getElementById("eplgames").innerHTML ="<span class='gametitle'>잉글랜드 프리미어 리그</span> <br> <span class='date'>2022.9.1</span> 웨스트 햄 1 vs 토트넘 1 <br> <span class='date'>2022.9.3</span>  토트넘 6 vs 레스터 시티 2";
+        document.getElementById("cupgames").innerHTML ="<span class='gametitle'>챔피언스 리그 & 컵 대회</span> <br> <span class='date'>2022.9.8</span> 토트넘 2 vs 마르세유 0 (챔피언스 리그 조별) <br> <span class='date'>2022.9.14</span>  스포르xld 2 vs 토트넘 0 (챔피언스 리그 조별)";
+        }
+    }
+
     function buildCalendar() {
-        var row = null;
-        var calendarTable = document.getElementById("calendar");
         var calendarTableTitle = document.getElementById("calendarTitle");
-        calendarTableTitle.innerHTML = today.getFullYear() + "년 " + (today.getMonth() + 1) + "월"; // 오늘의 년과 월을 표시합니다.
+        calendarTableTitle.innerHTML = today.getFullYear() + "년 " + (today.getMonth() + 1) + "월"; // 오늘의 년과 월을 표시합니다. getMonth는 0월부터 나타내기에 +1
+        updategames();
     }
     function prevCalendar() {
         today = new Date(today.getFullYear(), today.getMonth() - 1, today.getDate());
@@ -33,6 +95,7 @@
         today = new Date(today.getFullYear(), today.getMonth() + 1, today.getDate());
         buildCalendar();
     }
+
 </script>
 </head>
 
@@ -43,7 +106,7 @@
                 height="160">
         </div>
         <div class="sloganbox">
-            <p class="slogan"><span>C</span>OME <span>O</span>N <span>Y</span>OUR <span>S</span>PURS</p>
+            <p class="slogan"><span class="sslo">C</span>OME <span class="sslo">O</span>N <span class="sslo">Y</span>OUR <span class="sslo">S</span>PURS</p>
         </div>
     </header>
 
@@ -89,15 +152,20 @@
         </div>
     </nav>
 
-    <scetion>
-        <table id="calendar">
-            <tr>
-                <td><label onclick="prevCalendar()"> ◀ </label></td>
-                <td colspan="5" id="calendarTitle">yyyy년 m월</td>
-                <td><label onclick="nextCalendar()"> ▶ </label></td>
-            </tr>
+    <section>
+        <div id="calendar">
+                <span style="font-size: 20px; color:black;"><label onclick="prevCalendar()"> ◀ </label></span>
+                <span id="calendarTitle">yyyy년 m월</span>
+                <span style="font-size: 20px; color:black;"><label onclick="nextCalendar()"> ▶ </label></span>
             <script type="text/javascript">buildCalendar();</script>
-        </table>
-    </scetion>
+        </div>
+        <hr>
+        <div id="games">
+            <span id="eplgames">
+            </span>
+            <span id="cupgames">
+            </span>
+        </div>
+    </section>
     </body>
     </html>
