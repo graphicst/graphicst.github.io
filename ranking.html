@@ -8,10 +8,22 @@
   <link rel="stylesheet" href="totstyle.css">
 
   <style>
+    .eplsec{
+      width : 800px;
+    }
+    .cupsec{
+      display: flex;
+      flex-direction: column;
+      width : 500px;
+      text-align: center;
+      font-family: "맑은 고딕";
+      font-size: 23px;
+      font-weight: bold;
+    }
     .eplrank {
       position: absolute;
-      top: 80px;
-      left: 80px;
+      top: 50px;
+      left: 60px;
       height: 500px;
       /*인접한 셀 테두리 겹쳐서 하나로, 셀 테두리 사이의 거리 0 */
       border-collapse: collapse;
@@ -20,7 +32,7 @@
 
     .eplrank caption {
       font-family: "맑은 고딕";
-      font-size: 20px;
+      font-size: 23px;
       font-weight: bold;
       margin-bottom: 15px;
     }
@@ -32,7 +44,7 @@
       font-family: "맑은 고딕";
       font-size: 14px;
       font-weight: 2em;
-      padding: 10px 7px;
+      padding: 10px 7px 10px 7px;
       text-align: center;
     }
 
@@ -72,7 +84,6 @@
 
     .eplrank .teamname {
       text-align: left;
-      vertical-align: middle;
     }
   </style>
 </head>
@@ -93,21 +104,21 @@
     <br>
     <ul class="menu">
       <li><a href="index.html">HOME</a></li>
-      <li><a href="#">2022/23 Season</a>
+      <li><a href="ranking.html">2022/23 Season</a>
         <ul class="submenu">
           <li><a href="ranking.html">구단 순위</a></li>
           <li><a href="schedule.html">경기 일정</a></li>
           <li><a href="squad.html">선수단</a></li><br>
         </ul>
       </li>
-      <li><a href="#">Record</a>
+      <li><a href="club_record.html">Record</a>
         <ul class="submenu">
           <li><a href="club_record.html">역대 클럽 성적</a>
           <li><a href="player_record.html">개인 기록</a></li>
           <li><a href="rival.html">라이벌 매치</a></li><br>
         </ul>
       </li>
-      <li><a href="#">etc</a>
+      <li><a href="survey.html">etc</a>
         <ul class="submenu">
           <li><a href="survey.html">설문 조사</a></li>
           <li><a href="quiz.html">퀴즈</a></li>
@@ -131,6 +142,7 @@
     </div>
   </nav>
   <section>
+    <div class="eplsec">
     <table class="eplrank">
       <caption>잉글랜드 프리미어 리그</caption>
       <colgroup>
@@ -158,107 +170,111 @@
       <tbody>
         <tr>
           <td class="rank1"><strong>1</strong></td>
-          <td class="teamname"><strong>맨체스터 시티 FC</strong></td>
-          <td></td>
-          <td class="point"><strong></strong></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td class="teamname"><img src ="https://upload.wikimedia.org/wikipedia/ko/thumb/3/33/%EB%A7%A8%EC%B2%B4%EC%8A%A4%ED%84%B0_%EC%8B%9C%ED%8B%B0_FC_%EB%A1%9C%EA%B3%A0.svg/2048px-%EB%A7%A8%EC%B2%B4%EC%8A%A4%ED%84%B0_%EC%8B%9C%ED%8B%B0_FC_%EB%A1%9C%EA%B3%A0.svg.png" width = "25px" height = "25px" style="margin-right: 10px;"><strong>맨체스터 시티 FC</strong></td>
+          <td>38</td>
+          <td class="point"><strong>89</strong></td>
+          <td>28</td>
+          <td>5</td>
+          <td>5</td>
+          <td>61</td>
         </tr>
         <tr>
           <td class="chams"><strong>2</strong></td>
-          <td class="teamname"><strong></strong></td>
-          <td></td>
-          <td class="point"><strong></strong></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td class="teamname"><img src ="https://upload.wikimedia.org/wikipedia/ko/5/5b/%EC%95%84%EC%8A%A4%EB%84%90_FC_%EB%A1%9C%EA%B3%A0.png" width = "25px" height = "25px" style="margin-right: 10px;"><strong>아스널 FC</strong></td>
+          <td>38</td>
+          <td class="point"><strong>84</strong></td>
+          <td>26</td>
+          <td>6</td>
+          <td>6</td>
+          <td>45</td>
         </tr>
         <tr>
           <td class="chams"><strong>3</strong></td>
-          <td class="teamname"><strong></strong></td>
-          <td></td>
-          <td class="point"><strong></strong></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td class="teamname"><img src ="https://upload.wikimedia.org/wikipedia/ko/9/9e/%EB%A7%A8%EC%B2%B4%EC%8A%A4%ED%84%B0_%EC%9C%A0%EB%82%98%EC%9D%B4%ED%8B%B0%EB%93%9C_FC_%EB%A1%9C%EA%B3%A0.png" width = "25px" height = "25px" style="margin-right: 10px;"><strong>맨체스터 유나이티드 FC</strong></td>
+          <td>38</td>
+          <td class="point"><strong>75</strong></td>
+          <td>23</td>
+          <td>6</td>
+          <td>9</td>
+          <td>15</td>
         </tr>
         <tr>
           <td class="chams"><strong>4</strong></td>
-          <td class="teamname"><strong></strong></td>
-          <td></td>
-          <td class="point"><strong></strong></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td class="teamname"><img src ="https://upload.wikimedia.org/wikipedia/ko/thumb/8/84/%EB%89%B4%EC%BA%90%EC%8A%AC_%EC%9C%A0%EB%82%98%EC%9D%B4%ED%8B%B0%EB%93%9C_FC_%EB%A1%9C%EA%B3%A0.svg/300px-%EB%89%B4%EC%BA%90%EC%8A%AC_%EC%9C%A0%EB%82%98%EC%9D%B4%ED%8B%B0%EB%93%9C_FC_%EB%A1%9C%EA%B3%A0.svg.png" width = "25px" height = "25px" style="margin-right: 10px;"><strong>뉴캐슬 유나이티드 FC</strong></td>
+          <td>38</td>
+          <td class="point"><strong>71</strong></td>
+          <td>19</td>
+          <td>14</td>
+          <td>5</td>
+          <td>35</td>
         </tr>
         <tr>
           <td class="euro"><strong>5</strong></td>
-          <td class="teamname"><strong></strong></td>
-          <td></td>
-          <td class="point"><strong></strong></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td class="teamname"><img src ="https://upload.wikimedia.org/wikipedia/ko/thumb/0/05/%EB%A6%AC%EB%B2%84%ED%92%80_FC_%EB%A1%9C%EA%B3%A0.svg/270px-%EB%A6%AC%EB%B2%84%ED%92%80_FC_%EB%A1%9C%EA%B3%A0.svg.png" width = "25px" height = "25px" style="margin-right: 10px;"><strong>리버풀 FC</strong></td>
+          <td>38</td>
+          <td class="point"><strong>67</strong></td>
+          <td>19</td>
+          <td>10</td>
+          <td>9</td>
+          <td>28</td>
         </tr>
         <tr>
           <td class="euro"><strong>6</strong></td>
-          <td class="teamname"><strong></strong></td>
-          <td></td>
-          <td class="point"><strong></strong></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td class="teamname"><img src ="https://i.namu.wiki/i/rYM832EIkTX5-F7DbtT9qANID3766K2ChYVXdYgnfG6GSfnIrKxRqULYnHkKsQ4mHapBauFVOgudcYsibAM_CA.svg" width = "25px" height = "25px" style="margin-right: 10px;"><strong>브라이튼 앤 호브 알비온 FC</strong></td>
+          <td>38</td>
+          <td class="point"><strong>62</strong></td>
+          <td>18</td>
+          <td>8</td>
+          <td>12</td>
+          <td>19</td>
         </tr>
         <tr>
           <td class="rank"><strong>7</strong></td>
-          <td class="teamname"><strong></strong></td>
-          <td></td>
-          <td class="point"><strong></strong></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td class="teamname"><img src ="https://i.namu.wiki/i/kA0eC9SFkX67wDZV2KdxwRaZBX3de87vE233htuavAg3Y905H6nlT2Bk-CfGk1F6xtcx1S-mvFZUfpWiC9Clh-aEfoERTawG13lx3B4EkVIPd2BOTxlhHlufa5FVWHF-COD1UJX7xw1KVLz_ITOAuQ.svg" width = "25px" height = "25px" style="margin-right: 10px;"><strong>아스톤 빌라 FC</strong></td>
+          <td>38</td>
+          <td class="point"><strong>61</strong></td>
+          <td>18</td>
+          <td>7</td>
+          <td>13</td>
+          <td>5</td>
         </tr>
         <tr>
-          <td class="rank"><strong>8</strong></td>
-          <td class="teamname"><strong></strong></td>
-          <td></td>
-          <td class="point"><strong></strong></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td class="rank"><strong><mark>8</mark></strong></td>
+          <td class="teamname"><img src ="https://upload.wikimedia.org/wikipedia/ko/thumb/3/33/%ED%86%A0%ED%8A%B8%EB%84%98_%ED%99%8B%EC%8A%A4%ED%8D%BC_FC_%EB%A1%9C%EA%B3%A0.svg/180px-%ED%86%A0%ED%8A%B8%EB%84%98_%ED%99%8B%EC%8A%A4%ED%8D%BC_FC_%EB%A1%9C%EA%B3%A0.svg.png" width = "25px" height = "25px" style="margin-right: 10px;"><strong><mark>토트넘 홋스퍼 FC</mark></strong></td>
+          <td>38</td>
+          <td class="point"><strong><mark>60</mark></strong></td>
+          <td>18</td>
+          <td>6</td>
+          <td>14</td>
+          <td>7</td>
         </tr>
         <tr>
           <td class="rank"><strong>9</strong></td>
-          <td class="teamname"><strong></strong></td>
-          <td></td>
-          <td class="point"><strong></strong></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td class="teamname"><img src ="https://i.namu.wiki/i/ON84uOiwuTCjUnTVv4Nr3llI9gt-plU5tJR6pVCm5I__f319NiLVxP1JD_QCs-YCqRCNi0Pa_PvdgFcsAZyhKg.svg" width = "25px" height = "25px" style="margin-right: 10px;"><strong>브렌트포드 FC</strong></td>
+          <td>38</td>
+          <td class="point"><strong>59</strong></td>
+          <td>15</td>
+          <td>14</td>
+          <td>9</td>
+          <td>12</td>
         </tr>
         <tr>
           <td class="rank"><strong>10</strong></td>
-          <td class="teamname"><strong></strong></td>
-          <td></td>
-          <td class="point"><strong></strong></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td class="teamname"><img src ="https://i.namu.wiki/i/5NI3iSjLb6ofTK9xQ7WFUfoNPKPLn4upwpl2MhluExSbSl6GsoIuxETRUiXYmd5o6CQwSMvRYGLfqdrEiNVlsjgwot5BKrFApgg2fEuhwrP_Nv_ESUgzBr7sux3i03d8zfxYv1IlpfGEt1_tAfI5vg.svg" width = "25px" height = "25px" style="margin-right: 10px;"><strong>풀럼 FC</strong></td>
+          <td>38</td>
+          <td class="point"><strong>52</strong></td>
+          <td>15</td>
+          <td>7</td>
+          <td>16</td>
+          <td>2</td>
         </tr>
       </tbody>
-
     </table>
+  </div>
+  <div class="cupsec">
+      UEFA 챔피언스 리그
+      <span style="text-align: left; margin-top: 50px; color: orangered;">8전 3승 3무 2패 8득점 7실점</span>
+  </div>
   </section>
 </body>
 
