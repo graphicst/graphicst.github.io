@@ -4,6 +4,7 @@
   }
 
   body {
+      background-color: rgb(247, 247, 247);
       display: flex;
       flex-wrap: wrap;
       margin: 0;
@@ -30,7 +31,7 @@
   nav {
       /* 자식요소에 position : absolute 를 적용하기 위해 부모요소를 relative로 */
       position: relative;
-      background: orange;
+      background: rgb(255, 193, 78);
       width: 230px;
   }
 
@@ -61,17 +62,17 @@
       width: 100%;
       text-align: center;
       line-height: 60px;
-      background-color: orange;
+      background-color: rgb(255, 193, 78);
   }
 
   .menu a {
-      color: navy;
+      color: rgb(123, 123, 255);
       font-weight: 1000;
   }
 
   .submenu>li {
       line-height: 50px;
-      background-color: rgb(237, 208, 135);
+      background-color: rgb(253, 211, 133);
   }
 
   .submenu {
@@ -82,7 +83,7 @@
   }
 
   .menu>li:hover {
-      background-color: rgb(237, 208, 135);
+      background-color: rgb(253, 211, 133);
   }
 
   .menu>li:hover .submenu {
@@ -117,7 +118,6 @@
   .sloganbox {
       position: relative;
       float: right;
-      background-color: navy;
       width: 1422px;
       height: 150px;
 
@@ -131,7 +131,7 @@
       font-family: "맑은 고딕";
       font-size: 3em;
       font-weight: 700;
-      color: white;
+      color: #2e2e72;
       text-align: center;
   }
 
