@@ -14,11 +14,28 @@
     .cupsec{
       display: flex;
       flex-direction: column;
-      width : 500px;
+      width : 560px;
       text-align: center;
       font-family: "맑은 고딕";
-      font-size: 23px;
+      font-size: 20px;
       font-weight: bold;
+    }
+    .cuprank{
+      margin-top: 30px;
+      border-style: solid;
+    }
+    .cuprank caption{
+      font-size: 23px;
+      margin-bottom: 15px;
+      color:navy;
+    }
+    .cuprank td{
+      width : 260px;
+      text-align: center;
+    }
+    .cupscore{
+      font-size:17px;
+      color:rgb(80, 80, 255);
     }
     .eplrank {
       position: absolute;
@@ -35,6 +52,7 @@
       font-size: 23px;
       font-weight: bold;
       margin-bottom: 15px;
+      color:navy;
     }
 
     .eplrank td {
@@ -271,9 +289,37 @@
       </tbody>
     </table>
   </div>
-  <div class="cupsec">
-      UEFA 챔피언스 리그
-      <span style="text-align: left; margin-top: 50px; color: orangered;">8전 3승 3무 2패 8득점 7실점</span>
+  <div class="cupsec">      
+      <table class="cuprank">
+        <caption>UEFA 챔피언스 리그</caption>
+        <tr style="line-height: 35px;">
+          <td><img src="https://www.10wallpaper.com/wallpaper/1366x768/1110/UEFA_Champions_League-Football_series_Desktop_Wallpaper_1366x768.jpg" width = "200" height="100"></td>
+          <td style="margin-left: 20px;">16강 탈락(VS AC밀란)<br><span class="cupscore">최종 스코어 0:1</span></td>
+        </tr>
+        <tr>
+          <td colspan="2" style="color: orangered; height: 50px;">8전 3승 3무 2패 8득점 7실점</td>
+        </tr>
+      </table>
+      <table class="cuprank">
+        <caption>Emirates FA CUP</caption>
+        <tr style="line-height: 35px;">
+          <td><img src="data:image/png;base64,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" width = "200" height="100"></td>
+          <td style="margin-left: 20px;">16강 탈락(VS 셰필드)<br><span class="cupscore">최종 스코어 0:1</span></td>
+        </tr>
+        <tr>
+          <td colspan="2" style="color: orangered; height: 50px;">3전 2승 0무 1패 4득점 1실점</td>
+        </tr>
+      </table>
+      <table class="cuprank">
+        <caption>Carabao CUP</caption>
+        <tr style="line-height: 35px;">
+          <td><img src="data:image/png;base64,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" width = "200" height="100"></td>
+          <td style="margin-left: 20px;">32강 탈락(VS 노팅엄)<br><span class="cupscore">최종 스코어 0:2</span></td>
+        </tr>
+        <tr>
+          <td colspan="2" style="color: orangered; height: 50px;">1전 0승 0무 1패 0득점 2실점</td>
+        </tr>
+      </table>
   </div>
   </section>
 </body>
