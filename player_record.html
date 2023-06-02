@@ -229,8 +229,14 @@
 
         document.getElementById("content").innerHTML = str;
         }
+        
+        function change(obj){
+          obj.style.backgroundColor = 'yellow';
+        }
 
-
+        function back(obj){
+          obj.style.backgroundColor = '';
+        }
     </script>
 
 
@@ -265,9 +271,9 @@
           <li><a href="rival.html">라이벌 매치</a></li><br>
         </ul>
       </li>
-      <li><a href="survey.html">etc</a>
+      <li><a href="intro.html">etc</a>
         <ul class="submenu">
-          <li><a href="survey.html">설문 조사</a></li>
+          <li><a href="intro.html">구단 소개</a></li>
           <li><a href="quiz.html">퀴즈</a></li>
         </ul>
       </li>
@@ -290,12 +296,12 @@
   </nav>
   <section>
     <div class="oncc">
-        <span class="onc" onclick="setTable1()">득점 순위</span>
-        <span class="onc" onclick="setTable2()">출전 순위</span>
-        <span class="onc" onclick="setTable3()">시즌별 득점왕</span>
-        <span class="onc" onclick="setTable4()">유럽 대항전 득점 순위</span>
-        <span class="onc" onclick="setTable5()">이적료 수입</span>
-        <span class="onc" onclick="setTable6()">이적료 지출</span>
+        <span class="onc" onclick="setTable1()" onmouseover="change(this)" onmouseout="back(this)">득점 순위</span>
+        <span class="onc" onclick="setTable2()" onmouseover="change(this)" onmouseout="back(this)">출전 순위</span>
+        <span class="onc" onclick="setTable3()" onmouseover="change(this)" onmouseout="back(this)">시즌별 득점왕</span>
+        <span class="onc" onclick="setTable4()" onmouseover="change(this)" onmouseout="back(this)">유럽 대항전 득점 순위</span>
+        <span class="onc" onclick="setTable5()" onmouseover="change(this)" onmouseout="back(this)">이적료 수입</span>
+        <span class="onc" onclick="setTable6()" onmouseover="change(this)" onmouseout="back(this)">이적료 지출</span>
     </div>  
     <div id="content">
     </div>
