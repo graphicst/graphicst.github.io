@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+
+ <head>
+    <title> 토트넘 핫스퍼 </title>
+    <link rel="icon" href="https://raw.githubusercontent.com/graphicst/graphicst.github.io/main/favicon.ico"
+      type="image/x-icon">
+    <link rel="stylesheet" href="totstyle.css">
+    <style>
+
+        section{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .oncc{
+            margin-left: 20px;
+            width:1390px;
+            height:50px;
+        }
+        .onc{
+           padding : 5px;
+           border-style: solid; 
+           border-color: rebeccapurple;
+           text-align: center;
+           font-weight: bold;
+        }
+
+        #content{
+            position : relative;
+            width : 1390px;
+            height : 750px;           
+        }
+
+        .history{
+          position : absolute;
+          top : 30px;
+          left : 150px;  
+        }
+
+        .history2{
+          position : absolute;
+          top : 30px;
+          left : 150px;
+        }
+
+        table{
+          font-size: 20px;
+          border-collapse: collapse;
+        }
+
+        table caption{
+          margin-bottom : 40px;
+          font-size : 23px;
+          font-weight: bold;
+        }
+
+        .history2 td{
+          height: 30px;
+        }
+
+        table th, td{
+          font-size:18px;
+          text-align: center;
+          padding : 5px;
+          height: 40px;
+          border-style:solid;
+          border-width: 1px;
+          border-collapse: collapse;
+        }
+        .bold{
+          font-weight: bold;
+        }
+
+    </style>
+
+    <script>
+        function setTable1(){
+        var str = "";
+        str += "<table class='history'>";
+        str += "<colgroup>";
+        str += "<col style='width:70px';> <col style='width:230px;'><col style='width:100px;'><col style='width:100px;'><col style='width:100px;'><col style='width:100px;'>";
+        str += "<colgroup>";
+        str += "<caption>역대 득점 순위</caption>";
+        str += "<thead>";
+        str += "<th>순위</th><th>이름</th><th>경기 수</th><th>총 득점</th><th>리그</th><th>경기당 골</th>";
+        str += "</thead>";
+        str += "<tr><td><span class='bold' style='color:red'>1</span></td><td><span class='bold' style='color:blue;'>해리 케인</span></td><td>435</td><td><span class='bold'>280</span></td><td>213</td><td>0.64</td></tr>";
+        str += "<tr><td><span class='bold'>2</span></td><td>지미 그리브스</span></td><td>381</td><td><span class='bold'>268</span></td><td>220</td><td>0.70</td></tr>";
+        str += "<tr><td><span class='bold'>3</span></td><td>바비 스미스</span></td><td>317</td><td><span class='bold'>208</span></td><td>176</td><td>0.66</td></tr>";
+        str += "<tr><td><span class='bold'>4</span></td><td>마틴 치버스</span></td><td>367</td><td><span class='bold'>174</span></td><td>118</td><td>0.47</td></tr>";
+        str += "<tr><td><span class='bold'>5</span></td><td>클리프 존스</span></td><td>378</td><td><span class='bold'>159</span></td><td>135</td><td>0.42</td></tr>";
+        str += "<tr><td><span class='bold'>6</span></td><td><span class='bold' style='color:blue;''>손흥민</span></td><td>372</td><td><span class='bold'>145</span></td><td>103</td><td>0.39</td></tr>";
+        str += "<tr><td><span class='bold'>7</span></td><td>저메인 데포</span></td><td>362</td><td><span class='bold'>143</span></td><td>91</td><td>0.40</td></tr>";
+        str += "<tr><td><span class='bold'>8</span></td><td>조지 헌트</span></td><td>198</td><td><span class='bold'>138</span></td><td>125</td><td>0.70</td></tr>";
+        str += "<tr><td><span class='bold'>9</span></td><td>렌 두케민</span></td><td>307</td><td><span class='bold'>134</span></td><td>114</td><td>0.44</td></tr>";
+        str += "<tr><td><span class='bold'>10</span></td><td>앨런 길진</span></td><td>439</td><td><span class='bold'>133</span></td><td>93</td><td>0.30</td></tr>";
+        str += "</table>";
+
+        document.getElementById("content").innerHTML = str;
+        }
+
+        function setTable2(){
+        var str = "";
+        str += "<table class='history'>";
+        str += "<colgroup>";
+        str += "<col style='width:70px';> <col style='width:230px;'><col style='width:200px;'><col style='width:150px;'>";
+        str += "<colgroup>";
+        str += "<caption>역대 출전 순위</caption>";
+        str += "<thead>";
+        str += "<th>순위</th><th>이름</th><th>출전 년도</th><th>출전 경기 수</th>";
+        str += "</thead>";
+        str += "<tr><td><span class='bold' style='color:red'>1</span></td><td>스티브 페리먼</td><td>1969년-1986년</td><td><span class='bold'>866</span></td></tr>";
+        str += "<tr><td><span class='bold'>2</span></td><td>게리 매버트</td><td>1982년-1988년</td><td><span class='bold'>611</span></td></tr>";
+        str += "<tr><td><span class='bold'>3</span></td><td>팻 제닝스</td><td>1964년-1977년</td><td><span class='bold'>590</span></td></tr>";
+        str += "<tr><td><span class='bold'>4</span></td><td>톰 모리스</td><td>1899년-1912년</td><td><span class='bold'>523</span></td></tr>";
+        str += "<tr><td><span class='bold'>5</span></td><td>시릴 노울스</td><td>1964년-1975년</td><td><span class='bold'>506</span></td></tr>";
+        str += "<tr><td><span class='bold'>6</span></td><td>글렌 호들</td><td>1975년-1987년</td><td><span class='bold'>490</span></td></tr>";
+        str += "<tr><td><span class='bold'>7</span></td><td>테드 디치번</td><td>1946년-1958년</td><td><span class='bold'>452</span></td></tr>";
+        str += "<tr><td><span class='bold'>8</span></td><td><span class='bold' style='color:blue;'>위고 요리스</span></td><td>2012년-</td><td><span class='bold'>447</span></td></tr>";
+        str += "<tr><td><span class='bold'>9</span></td><td>앨런 길진</td><td>1964년-1974년</td><td><span class='bold'>439</span></td></tr>";
+        str += "<tr><td><span class='bold'>10</span></td><td>지미 디목</td><td>1919년-1931년</td><td><span class='bold'>437</span></td></tr>";
+        str += "</table>";
+
+        document.getElementById("content").innerHTML = str;
+        }
+
+        function setTable3(){
+        var str = "";
+        str += "<table class='history2'>";
+        str += "<colgroup>";
+        str += "<col style='width:70px';> <col style='width:230px;'><col style='width:150px;'><col style='width:400px;'>";
+        str += "</colgroup>";
+        str += "<caption>클럽 내 시즌별 득점 왕</caption>";
+        str += "<thead>";
+        str += "<th>순위</th><th>이름</th><th>득점 왕 횟수</th><th>득점 왕 시즌</th>";
+        str += "</thead>";
+        str += "<tr><td><span class='bold' style='color:red'>1</span></td><td><span class='bold' style='color:blue;''>해리 케인</span></td><td><span class='bold'>9</span></td><td>2014-2023</td></tr>";
+        str += "<tr><td><span class='bold'>2</span></td><td>테디 셰링엄</td><td><span class='bold'>5</span></td><td>1992-1994, 1995-1997, 2002-2003</td></tr>";
+        str += "<tr><td><span class='bold'>3</span></td><td>로비 킨</td><td><span class='bold'>4</span></td><td>2002-2004, 2005-2006, 2007-2008</td></tr>";
+        str += "<tr><td><span class='bold'>3</span></td><td>마틴 치버스</td><td><span class='bold'>4</span></td><td>1970-1974</td></tr>";
+        str += "<tr><td><span class='bold'>5</span></td><td>게리 리네커</td><td><span class='bold'>3</span></td><td>1989-1990, 1990-1992</td></tr>";
+        str += "<tr><td><span class='bold'>5</span></td><td>스티브 아치볼드</span></td><td><span class='bold'>3</span></td><td>1980-1981, 1982-1984</td></tr>";
+        str += "<tr><td><span class='bold'>5</span></td><td>존 던컨</td><td><span class='bold'>3</span></td><td>1974-1976, 1977-1978</td></tr>";
+        str += "<tr><td><span class='bold'>8</span></td><td>엠마누엘 아데바요르</td><td><span class='bold'>2</span></td><td>2011-2012, 2013-2014</td></tr>";
+        str += "<tr><td><span class='bold'>8</span></td><td>디미타르 베르바토프</td><td><span class='bold'>2</span></td><td>2006-2008</td></tr>";
+        str += "<tr><td><span class='bold'>8</span></td><td>스테펜 아이버슨</td><td><span class='bold'>2</span></td><td>1998-2000</td></tr>";
+        str += "<tr><td><span class='bold'>8</span></td><td>위르겐 클린스만</td><td><span class='bold'>2</span></td><td>1994-1995, 1997-1998</td></tr>";
+        str += "<tr><td><span class='bold'>8</span></td><td>클라이브 알렌</td><td><span class='bold'>2</span></td><td>19986-1988</td></tr>";
+        str += "<tr><td><span class='bold'>8</span></td><td>마크 팔코</td><td><span class='bold'>2</span></td><td>1984-1986</td></tr>";
+        str += "<tr><td><span class='bold'>8</span></td><td>가스 크룩스</td><td><span class='bold'>2</span></td><td>1981-1983</td></tr>";
+        str += "</table>";
+
+        document.getElementById("content").innerHTML = str;
+        }
+
+        function setTable4(){
+        var str = "";
+        str += "<table class='history'>";
+        str += "<colgroup>";
+        str += "<col style='width:70px';> <col style='width:230px;'><col style='width:100px;'><col style='width:100px;'><col style='width:100px;'><col style='width:100px;'>";
+        str += "<colgroup>";
+        str += "<caption>역대 유럽 대항전 득점 순위</caption>";
+        str += "<thead>";
+        str += "<th>순위</th><th>이름</th><th>출전 수</th><th>득점</th><th>경기당 골</th>";
+        str += "</thead>";
+        str += "<tr><td><span class='bold' style='color:red'>1</span></td><td><span class='bold' style='color:blue;'>해리 케인</span></td><td>76</td><td><span class='bold'>45</span></td><td>0.59</td></tr>";
+        str += "<tr><td><span class='bold'>2</span></td><td><span class='bold' style='color:blue;'>손흥민</span></td><td>61</td><td><span class='bold'>24</span></td><td>0.39</td></tr>";
+        str += "<tr><td><span class='bold'>3</span></td><td>저메인 데포</td><td>317</td><td><span class='bold'>23</span></td><td>0.66</td></tr>";
+        str += "<tr><td><span class='bold'>4</span></td><td>마틴 치버스</td><td>367</td><td><span class='bold'>22</span></td><td>0.69</td></tr>";
+        str += "<tr><td><span class='bold'>5</span></td><td>마크 팔코</td><td>378</td><td><span class='bold'>13</span></td><td>0.52</td></tr>";
+        str += "<tr><td><span class='bold'>5</span></td><td>앨런 길진</td><td>372</td><td><span class='bold'>13</span></td><td>0.46</td></tr>";
+        str += "<tr><td><span class='bold'>5</span></td><td>마틴 피터스</td><td>362</td><td><span class='bold'>13</span></td><td>0.41</td></tr>";
+        str += "<tr><td><span class='bold'>8</span></td><td><span class='bold' style='color:blue;'>루카스 모우라</span></td><td>12</td><td><span class='bold'>138</span></td><td>0.32</td></tr>";
+        str += "<tr><td><span class='bold'>8</span></td><td>디미타르 베르바토프</td><td>307</td><td><span class='bold'>12</span></td><td>0.75</td></tr>";
+        str += "<tr><td><span class='bold'>8</span></td><td>에릭 라멜라</td><td>439</td><td><span class='bold'>12</span></td><td>0.29</td></tr>";
+        str += "<tr><td><span class='bold'>11</span></td><td>가레스 베일</td><td>439</td><td><span class='bold'>11</span></td><td>0.41</td></tr>";
+        str += "</table>";
+
+        document.getElementById("content").innerHTML = str;
+        }
+
+        function setTable5(){
+        var str = "";
+        str += "<table class='history'>";
+        str += "<colgroup>";
+        str += "<col style='width:70px';> <col style='width:230px;'><col style='width:250px;'><col style='width:200px;'><col style='width:100px;'>";
+        str += "<colgroup>";
+        str += "<caption>역대 이적료 수입 순위</caption>";
+        str += "<thead>";
+        str += "<th>순위</th><th>이름</th><th>TO</th><th>금액</th><th>년도</th>";
+        str += "</thead>";
+        str += "<tr><td><span class='bold' style='color:red'>1</span></td><td>가레스 베일</td><td>레알 마드리드</td><td><span class='bold'>8630만 유로</span><br><span style='color:blue';>(약1222억)</span></td><td>2013년</td></tr>";
+        str += "<tr><td><span class='bold'>2</span></td><td>카일 워커</td><td>맨체스터 시티</td><td><span class='bold'>5300만 유로</span><br><span style='color:blue';>(약750억)</span></td><td>2017년</td></tr>";
+        str += "<tr><td><span class='bold'>3</span></td><td>루카 모드리치</td><td>레알 마드리드</td><td><span class='bold'>3300만 유로</span><br><span style='color:blue';>(약467억)</span></td><td>2012년</td></tr>";
+        str += "<tr><td><span class='bold'>4</span></td><td>디미타르 베르바토프</td><td>맨체스터 유나이티드</td><td><span class='bold'>3075만 유로</span><br><span style='color:blue';>(약435억)</span></td><td>2008년</td></tr>";
+        str += "<tr><td><span class='bold'>5</span></td><td>스티븐 베르바인</td><td>아약스</td><td><span class='bold'>2600만 유로</span><br><span style='color:blue';>(약369억)</span></td><td>2022년</td></tr>";
+        str += "<tr><td><span class='bold'>6</span></td><td>키어런 트리피어</td><td>아틀레티코 마드리드</td><td><span class='bold'>2000만 유로</span><br><span style='color:blue';>(약283억)</span></td><td>2019년</td></tr>";
+        str += "<tr><td><span class='bold'>7</span></td><td>로비 킨</td><td>리버풀</td><td><span class='bold'>1900만 유로</span><br><span style='color:blue';>(약269억)</span></td><td>2008년</td></tr>";
+        str += "<tr><td><span class='bold'>8</span></td><td>마이클 캐릭</td><td>맨체스터 유나이티드</td><td><span class='bold'>1860만 유로</span><br><span style='color:blue';>(약263억)</span></td><td>2006년</td></tr>";
+        str += "<tr><td><span class='bold'>9</span></td><td>크리스티안 에릭센</td><td>인테르</td><td><span class='bold'>1800만 유로</span><br><span style='color:blue';>(약255억)</span></td><td>2020년</td></tr>";
+        str += "<tr><td><span class='bold'>9</span></td><td>케빈 위머</td><td>스토크 시티</td><td><span class='bold'>1800만 유로</span><br><span style='color:blue';>(약255억)</span></td><td>2017년</td></tr>";
+        str += "</table>";
+
+        document.getElementById("content").innerHTML = str;
+        }
+
+        function setTable6(){
+        var str = "";
+        str += "<table class='history'>";
+        str += "<colgroup>";
+        str += "<col style='width:70px';> <col style='width:230px;'><col style='width:250px;'><col style='width:200px;'><col style='width:100px;'>";
+        str += "<colgroup>";
+        str += "<caption>역대 이적료 지출 순위</caption>";
+        str += "<thead>";
+        str += "<th>순위</th><th>이름</th><th>FROM</th><th>금액</th><th>년도</th>";
+        str += "</thead>";
+        str += "<tr><td><span class='bold' style='color:red'>1</span></td><td><span class='bold' style='color:blue;'>히샬리송</span></td><td>에버튼</td><td><span class='bold'>6000만 유로</span><br><span style='color:blue';>(약850억)</span></td><td>2022년</td></tr>";
+        str += "<tr><td><span class='bold'>2</span></td><td><span class='bold' style='color:blue;'>탕기 은돔벨레</span></td><td>리옹</td><td><span class='bold'>5500만 유로</span><br><span style='color:blue';>(약779억)</span></td><td>2019년</td></tr>";
+        str += "<tr><td><span class='bold'>3</span></td><td><span class='bold' style='color:blue;'>크리스티안 로메로</span></td><td>아탈란타</td><td><span class='bold'>4250만 유로</span><br><span style='color:blue';>(약602억)</span></td><td>2022년</td></tr>";
+        str += "<tr><td><span class='bold'>4</span></td><td><span class='bold' style='color:blue;'>다빈손 산체스</span></td><td>아약스</td><td><span class='bold'>4200만 유로</span><br><span style='color:blue';>(약595억)</span></td><td>2017년</td></tr>";
+        str += "<tr><td><span class='bold'>5</span></td><td>에릭 라멜라</td><td>AS 로마</td><td><span class='bold'>3000만 유로</span><br><span style='color:blue';>(약425억)</span></td><td>2013년</td></tr>";
+        str += "<tr><td><span class='bold'>5</span></td><td>무사 시소코</td><td>뉴캐슬</td><td><span class='bold'>3000만 유로</span><br><span style='color:blue';>(약2425억)</span></td><td>2016년</td></tr>";
+        str += "<tr><td><span class='bold'>7</span></td><td>스티븐 베르바인</td><td>PSV</td><td><span class='bold'>2700만 유로</span><br><span style='color:blue';>(약382억)</span></td><td>2020년</td></tr>";
+        str += "<tr><td><span class='bold'>8</span></td><td>로베르토 솔다도</td><td>발렌시아</td><td><span class='bold'>2600만 유로</span><br><span style='color:blue';>(약368억)</span></td><td>2013년</td></tr>";
+        str += "<tr><td><span class='bold'>9</span></td><td><span class='bold' style='color:blue;'>이브 비수마</span></td><td>브라이튼</td><td><span class='bold'>2500만 유로</span><br><span style='color:blue';>(약354억)</span></td><td>2022년</td></tr>";
+        str += "<tr><td><span class='bold'>9</span></td><td><span class='bold' style='color:blue;'>에메르송 로얄</span></td><td>바르셀로나</td><td><span class='bold'>2500만 유로</span><br><span style='color:blue';>(약354억)</span></td><td>2021년</td></tr>";
+        str += "</table>";
+
+        document.getElementById("content").innerHTML = str;
+        }
+
+
+    </script>
+
+
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html"><img src="https://github.com/graphicst/graphicst.github.io/blob/main/tot-logo.png?raw=true" width="200" height="160"></a>
+    </div>
+    <div class="sloganbox">
+      <p class="slogan"><span class="sslo">C</span>OME <span class="sslo">O</span>N <span class="sslo">Y</span>OUR <span
+          class="sslo">S</span>PURS</p>
+    </div>
+  </header>
+
+  <nav>
+    <br>
+    <ul class="menu">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="ranking.html">2022/23 Season</a>
+        <ul class="submenu">
+          <li><a href="ranking.html">구단 순위</a></li>
+          <li><a href="schedule.html">경기 일정</a></li>
+          <li><a href="squad.html">선수단</a></li><br>
+        </ul>
+      </li>
+      <li><a href="club_record.html">Record</a>
+        <ul class="submenu">
+          <li><a href="club_record.html">역대 클럽 성적</a>
+          <li><a href="player_record.html">개인 기록</a></li>
+          <li><a href="rival.html">라이벌 매치</a></li><br>
+        </ul>
+      </li>
+      <li><a href="survey.html">etc</a>
+        <ul class="submenu">
+          <li><a href="survey.html">설문 조사</a></li>
+          <li><a href="quiz.html">퀴즈</a></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="linkk">
+      <p>
+      <h4>공식 웹사이트</h4>
+      </p><br>
+      <a href="https://www.tottenhamhotspur.com/" target="_blank">
+        <img src="tothomeimg.svg" width="30" height="30"></a>
+      <a href="https://twitter.com/spursofficial" target="_blank">
+        <img src="tottwiimg.svg" width="30" height="30"></a>
+      <a href="https://www.facebook.com/TottenhamHotspur" target="_blank">
+        <img src="totfaceimg.svg" width="30" height="30"></a>
+      <a href="https://www.instagram.com/spursofficial/" target="_blank">
+        <img src="totinsimg.svg" width="30" height="30"></a>
+      <a href="https://www.youtube.com/spursofficial" target="_blank">
+        <img src="totyouimg.svg" width="30" height="30"></a>
+    </div>
+  </nav>
+  <section>
+    <div class="oncc">
+        <span class="onc" onclick="setTable1()">득점 순위</span>
+        <span class="onc" onclick="setTable2()">출전 순위</span>
+        <span class="onc" onclick="setTable3()">시즌별 득점왕</span>
+        <span class="onc" onclick="setTable4()">유럽 대항전 득점 순위</span>
+        <span class="onc" onclick="setTable5()">이적료 수입</span>
+        <span class="onc" onclick="setTable6()">이적료 지출</span>
+    </div>  
+    <div id="content">
+    </div>
+    </section>
+    <script>
+      setTable1()
+    </script>
+    </body>
+    </html>
+
