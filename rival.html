@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+
+ <head>
+    <title> 토트넘 핫스퍼 </title>
+    <link rel="icon" href="https://raw.githubusercontent.com/graphicst/graphicst.github.io/main/favicon.ico"
+      type="image/x-icon">
+    <link rel="stylesheet" href="totstyle.css">
+    <style>
+
+        section{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .oncc{
+            margin-left: 20px;
+            width:1390px;
+            height:50px;
+        }
+        .onc{
+           padding : 5px;
+           border-style: solid; 
+           border-color: rebeccapurple;
+           text-align: center;
+           font-weight: bold;
+        }
+
+        #content{
+            position : relative;
+            width : 1390px;
+            height : 750px;           
+        }
+
+
+        table{
+          font-size: 15px;
+          border-collapse: collapse;
+        }
+
+        .dname{
+            background-color: rgb(236, 236, 236);
+            text-align: center;
+            font-size : 23px;
+            font-weight: bold;
+            height: 40px;
+        }
+
+        .dphoto{
+            height : 200px;
+        }
+
+        table td{
+            text-align: center;
+            border-style: solid;
+            border-width: 0.5px;
+            border-color: grey;
+            padding: 10px;
+        }
+
+        .ars{
+            color:red;
+            font-weight: bold;
+            padding : 10px;
+            font-size: 20px;
+        }
+
+        .tot{
+            background-color: rgb(9, 9, 58);
+            color :white;
+            font-weight: bold;
+            padding :10px;
+            font-size :20px;
+        }
+
+        .che{
+            color:rgb(0, 102, 204);
+            font-weight: bold;
+            padding : 10px;
+            font-size: 20px;
+        }
+
+        .wes{
+            color:rgb(102, 0, 0);
+            font-weight: bold;
+            padding : 10px;
+            font-size: 20px;
+        }
+
+        .rrec{
+            width : 1390px;
+            position: relative;
+        }
+
+        .all{
+            position: absolute;
+            top : 130px;
+            left : 100px;
+        }
+
+        .recent{
+            position: absolute;
+            top : 40px;
+            left : 620px;
+        }
+
+        .ddname{
+            text-align: center;
+            font-size : 16px;
+            font-weight: bold;
+            height: 40px;
+        }
+
+        .aars{
+            background-color: red;
+            color:white;
+            font-weight: bold;
+        }
+        .cche{
+            background-color: rgb(0, 102, 204);
+            color:white;
+            font-weight: bold;
+        }
+
+        .wwes{
+            background-color: rgb(102, 0, 0);
+            color:white;
+            font-weight: bold;
+        }
+
+        span{
+            font-weight: bold;
+        }
+
+
+    </style>
+    <script>
+        function Arsenal(){
+        var str = "";
+        str += "<table class='dervy'>";
+        str += "<tr><td colspan='2' class='dname'>북런던 더비</td></tr>";
+        str += "<tr><td class ='dphoto'><img src='https://i.namu.wiki/i/WT1KC4BTdD0LMdFX1E7L0gkSTMQRAFiSvRlT9Ts5nmNMlJnqcYrNZv0IJCU6N3VCt-oUYOWzq3w_5rlD1pYPOg.svg' width='450px' height='170px'></td><td class ='dphoto' style='background-color:red;'><img src='https://i.namu.wiki/i/CnmtcKJdeG0I9VsLOvjtur8t6QA5bn9go4WUTru23m4Qxexg6iOgdfzw8C3uqYi519oKVJDx8A79yt7QuyN1C98DoqfIBKSv3iPsOm2ImP7B4DOX6bp6AmGk6zAtpOqxvjdnwQ2CSlyLdOMQNCPwEQ.svg' width='450px' height='170px' ></td></tr>";
+        str += "<tr><td class='tot'>토트넘 핫스퍼 FC</td><td class='ars'>아스날 FC</td></tr>"
+        str += "</table>";
+        
+        str += "<div class='rrec'>"
+        str += "<table class='all'>";
+        str += "<colgroup>";
+        str += "<col style='width:150px';> <col style='width:150px;'><col style='width:150px;'>";
+        str += "<colgroup>";
+        str += "<tr><td colspan='3' class='ddname'>종합 전적</td></tr>";
+        str += "<tr><td class='tot' style='font-size:15px'>토트넘 핫스퍼 FC</td><td style='font-weight : bold';>무승부</td><td class='aars'>아스날 FC</td></tr>"
+        str += "<tr></td><td><span>61</span></td><td><span>51</span><td><span style='color:red;'>81</span></td></tr>"
+        str += "</table>";
+
+        str += "<table class='recent'>";
+        str += "<colgroup>";
+        str += "<col style='width:150px';> <col style='width:200px;'><col style='width:200px;'><col style='width:150px;'>";
+        str += "<colgroup>";
+        str += "<tr><td colspan='4' class='ddname'>최근 5경기 전적</td></tr>";
+        str += "<tr><td><span>일시</span></td><td><span>장소</span></td><td><span>결과</span></td><td><span>대회</span></td></tr>"
+        str += "<tr><td>2023년 1월 16일</td><td><span>토트넘 핫스퍼 스타디움</span></td><td>토트넘 0-<span style='color:red'>2 아스날</span></td><td>프리미어 리그</td></tr>"
+        str += "<tr><td>2022년 10월 1일</td><td><span style='color:red'>에미레이트 스타디움</span></td><td><span style='color:red'>아스날 3</span>-1 토트넘</td><td>프리미어 리그</td></tr>"
+        str += "<tr><td>2022년 5월 13일</td><td><span>토트넘 핫스퍼 스타디움</span></td><td><span>토트넘 3</span>-<span style='font-weight:normal; color:red;'>0 아스날</span></td><td>프리미어 리그</td></tr>"
+        str += "<tr><td>2021년 9월 26일</td><td><span style='color:red'>에미레이트 스타디움</span></td><td><span style='color:red'>아스날 3</span>-1 토트넘</td><td>프리미어 리그</td></tr>"
+        str += "<tr><td>2021년 3월 14일</td><td><span style='color:red'>에미레이트 스타디움</span></td><td><span style='color:red'>아스날 2</span>-1 토트넘</td><td>프리미어 리그</td></tr>"
+        str += "</table>";
+
+        document.getElementById("content").innerHTML = str;
+        }
+
+        function Chelsea(){
+        var str = "";
+        str += "<table class='dervy'>";
+        str += "<tr><td colspan='2' class='dname'>서북런던 더비</td></tr>";
+        str += "<tr><td class ='dphoto'><img src='https://i.namu.wiki/i/WT1KC4BTdD0LMdFX1E7L0gkSTMQRAFiSvRlT9Ts5nmNMlJnqcYrNZv0IJCU6N3VCt-oUYOWzq3w_5rlD1pYPOg.svg' width='450px' height='170px'></td><td class ='dphoto' style='background-color:rgb(0, 102, 204);'><img src='https://i.namu.wiki/i/SXKs9nd8i8v2SxlLWPDUFPxo0dxUVrfgHV_857vIKAU6JdVOP2q2aw5IgdSo86GP4oE7ojfZc51XycJJf7eElXD5WgvZiKp1o03IdoBImREIMazseyb8PD2raVh5j3QOlY8_LSPsQ0LpFEYLupZaNA.svg' width='450px' height='170px' ></td></tr>";
+        str += "<tr><td class='tot'>토트넘 핫스퍼 FC</td><td class='che'>첼시 FC</td></tr>"
+        str += "</table>";
+        
+        str += "<div class='rrec'>"
+        str += "<table class='all'>";
+        str += "<colgroup>";
+        str += "<col style='width:150px';> <col style='width:150px;'><col style='width:150px;'>";
+        str += "<colgroup>";
+        str += "<tr><td colspan='3' class='ddname'>종합 전적</td></tr>";
+        str += "<tr><td class='tot' style='font-size:15px'>토트넘 핫스퍼 FC</td><td style='font-weight : bold';>무승부</td><td class='cche'>첼시 FC</td></tr>"
+        str += "<tr></td><td><span>55</span></td><td><span>43</span><td><span style='color:rgb(0, 102, 204);'>77</span></td></tr>"
+        str += "</table>";
+
+        str += "<table class='recent'>";
+        str += "<colgroup>";
+        str += "<col style='width:150px';> <col style='width:200px;'><col style='width:200px;'><col style='width:150px;'>";
+        str += "<colgroup>";
+        str += "<tr><td colspan='4' class='ddname'>최근 5경기 전적</td></tr>";
+        str += "<tr><td><span>일시</span></td><td><span>장소</span></td><td><span>결과</span></td><td><span>대회</span></td></tr>"
+        str += "<tr><td>2023년 2월 26일</td><td><span>토트넘 핫스퍼 스타디움</span></td><td><span>토트넘 2</span>-<span style='color:rgb(0, 102, 204); font-weight:normal;'>0 첼시</span></td><td>프리미어 리그</td></tr>"
+        str += "<tr><td>2022년 1월 12일</td><td><span style='color:rgb(0, 102, 204);'>스템퍼드 브리지</span></td><td><span style='color:rgb(0, 102, 204); font-weight:normal'>첼시 2</span>-2 토트넘</td><td>프리미어 리그</td></tr>"
+        str += "<tr><td>2022년 1월 23일</td><td><span>스템퍼드 브리지</span></td><td><span style='color:rgb(0, 102, 204);'>첼시 2</span>-0 토트넘</td><td>프리미어 리그</td></tr>"
+        str += "<tr><td>2022년 1월 12일</td><td><span style='color:rgb(0, 102, 204);'>토트넘 핫스퍼 스타디움</span></td><td>토트넘 0-<span style='color:rgb(0, 102, 204);'>1 첼시</span></td><td>EFL 컵</td></tr>"
+        str += "<tr><td>2022년 1월 5일</td><td><span style='color:rgb(0, 102, 204);'>스템퍼드 브리지</span></td><td><span style='color:rgb(0, 102, 204);'>첼시 2</span>-0 토트넘</td><td>EFL 컵</td></tr>"
+        str += "</table>";
+
+        document.getElementById("content").innerHTML = str;
+        }
+
+        function WestHam(){
+        var str = "";
+        str += "<table class='dervy'>";
+        str += "<tr><td colspan='2' class='dname'>동북런던 더비</td></tr>";
+        str += "<tr><td class ='dphoto'><img src='https://i.namu.wiki/i/WT1KC4BTdD0LMdFX1E7L0gkSTMQRAFiSvRlT9Ts5nmNMlJnqcYrNZv0IJCU6N3VCt-oUYOWzq3w_5rlD1pYPOg.svg' width='450px' height='170px'></td><td class ='dphoto' style='background-color:rgb(102, 0, 0);'><img src='https://i.namu.wiki/i/DoK9foZ9LFid4NzP1ox_LTKq4DoQCTlQmmUSS4UZN0_3eBt97eLF7bawc0D4q3X4zym-0H-08q4mXpFaQ8C7jQ.svg' width='450px' height='170px' ></td></tr>";
+        str += "<tr><td class='tot'>토트넘 핫스퍼 FC</td><td class='wes'>웨스트햄 유나이티드</td></tr>"
+        str += "</table>";
+        
+        str += "<div class='rrec'>"
+        str += "<table class='all'>";
+        str += "<colgroup>";
+        str += "<col style='width:150px';> <col style='width:150px;'><col style='width:150px;'>";
+        str += "<colgroup>";
+        str += "<tr><td colspan='3' class='ddname'>종합 전적</td></tr>";
+        str += "<tr><td class='tot' style='font-size:15px'>토트넘 핫스퍼 FC</td><td style='font-weight : bold';>무승부</td><td class='wwes'>웨스트햄 유나이티드</td></tr>"
+        str += "<tr></td><td><span>101</span></td><td><span>54</span><td><span style='color:rgb(102, 0, 0);'>66</span></td></tr>"
+        str += "</table>";
+
+        str += "<table class='recent'>";
+        str += "<colgroup>";
+        str += "<col style='width:150px';> <col style='width:200px;'><col style='width:200px;'><col style='width:150px;'>";
+        str += "<colgroup>";
+        str += "<tr><td colspan='4' class='ddname'>최근 5경기 전적</td></tr>";
+        str += "<tr><td><span>일시</span></td><td><span>장소</span></td><td><span>결과</span></td><td><span>대회</span></td></tr>"
+        str += "<tr><td>2023년 2월 20일</td><td><span>토트넘 핫스퍼 스타디움</span></td><td><span>토트넘 2</span>-<span style='color:rgb(102, 0, 0); font-weight:normal;'>0 웨스트햄</span></td><td>프리미어 리그</td></tr>"
+        str += "<tr><td>2022년 9월 1일</td><td><span style='color:rgbrgb(102, 0, 0);'>런던 스타디움</span></td><td><span style='color:rgbrgb(102, 0, 0); font-weight:normal'>웨스트햄 1</span>-1 토트넘</td><td>프리미어 리그</td></tr>"
+        str += "<tr><td>2022년 3월 21일</td><td><span>토트넘 핫스퍼 스타디움</span></td><td><span>토트넘 3</span>-<span style='color:rgbrgb(102, 0, 0); font-weight:normal'>1 웨스트햄</span></td><td>프리미어 리그</td></tr>"
+        str += "<tr><td>2021년 12월 23일</td><td><span>토트넘 핫스퍼 스타디움</span></td><td><span>토트넘 2</span>-<span style='color:rgbrgb(102, 0, 0); font-weight:normal'>1 웨스트햄</span></td><td>EFL 컵</td></tr>"
+        str += "<tr><td>2021년 10월 24일</td><td><span style='color:rgbrgb(102, 0, 0);'>런던 스타디움</span></td><td><span style='color:rgbrgb(102, 0, 0);'>웨스트햄 1</span>-0 토트넘</td><td>프리미어 리그</td></tr>"
+        str += "</table>";
+
+        document.getElementById("content").innerHTML = str;
+        }
+
+        function change(obj){
+          obj.style.backgroundColor = 'yellow';
+        }
+
+        function back(obj){
+          obj.style.backgroundColor = '';
+        }
+        
+    </script>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html"><img src="https://github.com/graphicst/graphicst.github.io/blob/main/tot-logo.png?raw=true" width="200" height="160"></a>
+    </div>
+    <div class="sloganbox">
+      <p class="slogan"><span class="sslo">C</span>OME <span class="sslo">O</span>N <span class="sslo">Y</span>OUR <span
+          class="sslo">S</span>PURS</p>
+    </div>
+  </header>
+
+  <nav>
+    <br>
+    <ul class="menu">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="ranking.html">2022/23 Season</a>
+        <ul class="submenu">
+          <li><a href="ranking.html">구단 순위</a></li>
+          <li><a href="schedule.html">경기 일정</a></li>
+          <li><a href="squad.html">선수단</a></li><br>
+        </ul>
+      </li>
+      <li><a href="club_record.html">Record</a>
+        <ul class="submenu">
+          <li><a href="club_record.html">역대 클럽 성적</a>
+          <li><a href="player_record.html">개인 기록</a></li>
+          <li><a href="rival.html">라이벌 매치</a></li><br>
+        </ul>
+      </li>
+      <li><a href="intro.html">etc</a>
+        <ul class="submenu">
+            <li><a href="intro.html">구단 소개</a></li>
+          <li><a href="quiz.html">퀴즈</a></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="linkk">
+      <p>
+      <h4>공식 웹사이트</h4>
+      </p><br>
+      <a href="https://www.tottenhamhotspur.com/" target="_blank">
+        <img src="tothomeimg.svg" width="30" height="30"></a>
+      <a href="https://twitter.com/spursofficial" target="_blank">
+        <img src="tottwiimg.svg" width="30" height="30"></a>
+      <a href="https://www.facebook.com/TottenhamHotspur" target="_blank">
+        <img src="totfaceimg.svg" width="30" height="30"></a>
+      <a href="https://www.instagram.com/spursofficial/" target="_blank">
+        <img src="totinsimg.svg" width="30" height="30"></a>
+      <a href="https://www.youtube.com/spursofficial" target="_blank">
+        <img src="totyouimg.svg" width="30" height="30"></a>
+    </div>
+  </nav>
+  <section>
+    <div class="oncc">
+        <span class="onc" onclick="Arsenal()" onmouseover="change(this)" onmouseout="back(this)">VS 아스날</span>
+        <span class="onc" onclick="Chelsea()" onmouseover="change(this)" onmouseout="back(this)">VS 첼시</span>
+        <span class="onc" onclick="WestHam()" onmouseover="change(this)" onmouseout="back(this)">VS 웨스트햄 유나이티드</span>
+    </div>  
+    <div id="content">
+    </div>
+    </section>
+    <script>
+        Arsenal()
+    </script>
+    </body>
+    </html>
