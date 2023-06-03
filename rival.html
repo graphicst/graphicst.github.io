@@ -132,6 +132,11 @@
             font-weight: bold;
         }
 
+        .oncc>span:hover{
+          cursor:pointer;
+          background-color: yellow;
+        }
+
 
     </style>
     <script>
@@ -237,13 +242,6 @@
         document.getElementById("content").innerHTML = str;
         }
 
-        function change(obj){
-          obj.style.backgroundColor = 'yellow';
-        }
-
-        function back(obj){
-          obj.style.backgroundColor = '';
-        }
         
     </script>
 </head>
@@ -301,9 +299,9 @@
   </nav>
   <section>
     <div class="oncc">
-        <span class="onc" onclick="Arsenal()" onmouseover="change(this)" onmouseout="back(this)">VS 아스날</span>
-        <span class="onc" onclick="Chelsea()" onmouseover="change(this)" onmouseout="back(this)">VS 첼시</span>
-        <span class="onc" onclick="WestHam()" onmouseover="change(this)" onmouseout="back(this)">VS 웨스트햄 유나이티드</span>
+        <span class="onc" onclick="Arsenal()">VS 아스날</span>
+        <span class="onc" onclick="Chelsea()">VS 첼시</span>
+        <span class="onc" onclick="WestHam()">VS 웨스트햄 유나이티드</span>
     </div>  
     <div id="content">
     </div>
