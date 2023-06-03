@@ -351,6 +351,10 @@
                 var answerValue = answerCheck.value;
                 if (answerValue == 'answer'){
                     ans_num++
+                    good()
+                }
+                else{
+                    bad()
                 }
                 document.getElementById("content").innerHTML = "";
                 var str = "";
