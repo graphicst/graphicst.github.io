@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+  <html>
+
+  <head>
+    <title> 토트넘 핫스퍼 </title>
+    <link rel="icon" href="https://raw.githubusercontent.com/graphicst/graphicst.github.io/main/favicon.ico"
+      type="image/x-icon">
+    <link rel="stylesheet" href="totstyle.css">
+    <style>
+        #content{
+            font-size: 20px;
+            width : 1390px;
+            height : 750px; 
+        }
+        hr{
+            margin-left: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .but{
+            margin-top: 20px;
+        }
+        #error{
+            margin-top:20px;
+        }
+        .last{
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 35px;
+            text-align: center;
+            position: absolute;
+            top : 150px;
+            left : 500px;   
+        }
+        h1 {
+            margin-top :20px;
+            margin-left: 20px;
+        }
+        form{
+            line-height: 50px;
+        }
+        [type="radio"]{
+            width:15px;
+            height : 15px;
+            margin-left: 20px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .but{
+            margin-left: 20px;
+        }
+        [type="button"]{
+            font-size: 15px;
+            padding : 5px;
+            cursor: pointer;
+        }
+        label{
+            cursor: pointer;
+        }
+        .butt{
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        var ans_num = 0
+
+        function re(){
+            document.getElementById("content").style.backgroundColor=""
+        }
+
+        function good(){
+            document.getElementById("content").style.backgroundColor="rgb(204, 255, 204)"
+            setTimeout(re,200)
+        }
+
+        function bad(){
+            document.getElementById("content").style.backgroundColor="rgb(255, 153, 153)"
+            setTimeout(re,200)
+        }
+
+
+
+        function buildQuiz1(){
+            var str = "";
+            str +="<h1>1. 역사적으로 토트넘의 라이벌이 아닌 구단은?</h1>"
+            str +="<hr>"
+            str +="<form name='quizz'>"
+            str +="<label for='res1'><input type='radio' name='res' id='res1' value='wrong1'>아스날 FC</label><br>"
+            str +="<label for='res2'><input type='radio' name='res' id='res2' value='wrong2'>첼시 FC</label><br>"
+            str +="<label for='res3'><input type='radio' name='res' id='res3' value='answer'>리버풀 FC</label><br>"
+            str +="<label for='res4'><input type='radio' name='res' id='res4' value='wrong3'>웨스트햄 유나이티드</label><br>"
+            str +="<input type='button' name='next' class='but' value='다음 문제' onclick='buildQuiz2()'><br>"
+            str +="<div id='error'></div>"
+
+            document.getElementById("content").innerHTML = str;
+        }
+
+        function buildQuiz2(){
+            var answerCheck = document.querySelector('input[name="res"]:checked');
+            if(answerCheck){
+                var answerValue = answerCheck.value;
+                if (answerValue == 'answer'){
+                    ans_num++
+                    good()
+                }
+                else{
+                    bad()
+                }
+                document.getElementById("content").innerHTML = "";
+                var str = "";
+                str +="<h1>2. 토트넘의 역대 구단 득점 순위 1위는?</h1>"
+                str +="<hr>"
+                str +="<form name='quizz'>"
+                str +="<label for='res1'><input type='radio' name='res' id='res1' value='answer'>해리 케인</label><br>"
+                str +="<label for='res2'><input type='radio' name='res' id='res2' value='wrong1'>마틴 치버스</label><br>"
+                str +="<label for='res3'><input type='radio' name='res' id='res3' value='wrong2'>손흥민</label><br>"
+                str +="<label for='res4'><input type='radio' name='res' id='res4' value='wrong3'>지미 그리브스</label><br>"
+                str +="<input type='button' name='next' class='but' value='다음 문제' onclick='buildQuiz3()'>"
+
+                document.getElementById("content").innerHTML = str;
+                } else {
+                document.getElementById("error").innerHTML = "답변을 선택해주세요.";
+            } 
+        }
+        
+        function buildQuiz3(){
+            var answerCheck = document.querySelector('input[name="res"]:checked');
+            if(answerCheck){
+                var answerValue = answerCheck.value;
+                if (answerValue == 'answer'){
+                    ans_num++
+                    good()
+                }
+                else{
+                    bad()
+                }
+                document.getElementById("content").innerHTML = "";
+                var str = "";
+                str +="<h1>3. 테디 셰링엄의 토트넘 클럽 내 득점왕 횟수는?</h1>"
+                str +="<hr>"
+                str +="<form name='quizz'>"
+                str +="<label for='res1'><input type='radio' name='res' id='res1' value='wrong1'>6</label><br>"
+                str +="<label for='res2'><input type='radio' name='res' id='res2' value='wrong2'>3</label><br>"
+                str +="<label for='res3'><input type='radio' name='res' id='res3' value='answer'>5</label><br>"
+                str +="<label for='res4'><input type='radio' name='res' id='res4' value='wrong3'>9</label><br>"
+                str +="<input type='button' name='next' class='but' value='다음 문제' onclick='buildQuiz4()'>"
+
+                document.getElementById("content").innerHTML = str;
+                } else {
+                document.getElementById("error").innerHTML = "답변을 선택해주세요.";
+            } 
+        }
+        
+        function buildQuiz4(){
+            var answerCheck = document.querySelector('input[name="res"]:checked');
+            if(answerCheck){
+                var answerValue = answerCheck.value;
+                if (answerValue == 'answer'){
+                    ans_num++
+                    good()
+                }
+                else{
+                    bad()
+                }
+                document.getElementById("content").innerHTML = "";
+                var str = "";
+                str +="<h1>4. 손흥민의 토트넘 입단 년도는?</h1>"
+                str +="<hr>"
+                str +="<form name='quizz'>"
+                str +="<label for='res1'><input type='radio' name='res' id='res1' value='wrong1'>2014년</label><br>"
+                str +="<label for='res2'><input type='radio' name='res' id='res2' value='wrong2'>2013년</label><br>"
+                str +="<label for='res3'><input type='radio' name='res' id='res3' value='wrong3'>2017년</label><br>"
+                str +="<label for='res4'><input type='radio' name='res' id='res4' value='answer'>2015년</label><br>"
+                str +="<input type='button' name='next' class='but' value='다음 문제' onclick='buildQuiz5()'>"
+
+                document.getElementById("content").innerHTML = str;
+                } else {
+                document.getElementById("error").innerHTML = "답변을 선택해주세요.";
+            } 
+        }
+        
+        function buildQuiz5(){
+            var answerCheck = document.querySelector('input[name="res"]:checked');
+            if(answerCheck){
+                var answerValue = answerCheck.value;
+                if (answerValue == 'answer'){
+                    ans_num++
+                    good()
+                }
+                else{
+                    bad()
+                }
+                document.getElementById("content").innerHTML = "";
+                var str = "";
+                str +="<h1>5. 2022-2023시즌 토트넘 핫스퍼의 주장은?</h1>"
+                str +="<hr>"
+                str +="<form name='quizz'>"
+                str +="<label for='res1'><input type='radio' name='res' id='res1' value='wrong1'>해리 케인</label><br>"
+                str +="<label for='res2'><input type='radio' name='res' id='res2' value='answer'>위고 요리스</label><br>"
+                str +="<label for='res3'><input type='radio' name='res' id='res3' value='wrong2'>손흥민</label><br>"
+                str +="<label for='res4'><input type='radio' name='res' id='res4' value='wrong3'>피에르에밀 호이비에르</label><br>"
+                str +="<input type='button' name='next' class='but' value='다음 문제' onclick='buildQuiz6()'>"
+
+                document.getElementById("content").innerHTML = str;
+                } else {
+                document.getElementById("error").innerHTML = "답변을 선택해주세요.";
+            } 
+        }
+
+        function buildQuiz6(){
+            var answerCheck = document.querySelector('input[name="res"]:checked');
+            if(answerCheck){
+                var answerValue = answerCheck.value;
+                if (answerValue == 'answer'){
+                    ans_num++
+                    good()
+                }
+                else{
+                    bad()
+                }
+                document.getElementById("content").innerHTML = "";
+                var str = "";
+                str +="<h1>6. 다음 중 2022-2023시즌 토트넘 핫스퍼 소속 선수가 아닌 선수는?</h1>"
+                str +="<hr>"
+                str +="<form name='quizz'>"
+                str +="<label for='res1'><input type='radio' name='res' id='res1' value='wrong1'>다빈손 산체스</label><br>"
+                str +="<label for='res2'><input type='radio' name='res' id='res2' value='answer'>키어런 트리피어</label><br>"
+                str +="<label for='res3'><input type='radio' name='res' id='res3' value='wrong2'>벤 데이비스</label><br>"
+                str +="<label for='res4'><input type='radio' name='res' id='res4' value='wrong3'>클레망 랑글레</label><br>"
+                str +="<input type='button' name='next' class='but' value='다음 문제' onclick='buildQuiz7()'>"
+
+                document.getElementById("content").innerHTML = str;
+                } else {
+                document.getElementById("error").innerHTML = "답변을 선택해주세요.";
+            } 
+        }
+
+        function buildQuiz7(){
+            var answerCheck = document.querySelector('input[name="res"]:checked');
+            if(answerCheck){
+                var answerValue = answerCheck.value;
+                if (answerValue == 'answer'){
+                    ans_num++
+                      good()
+                }
+                else{
+                    bad()
+                }
+                document.getElementById("content").innerHTML = "";
+                var str = "";
+                str +="<h1>7. 2022-2023시즌 프리미어 리그 순위가 토트넘보다 낮은 구단은?</h1>"
+                str +="<hr>"
+                str +="<form name='quizz'>"
+                str +="<label for='res1'><input type='radio' name='res' id='res1' value='answer'>첼시 FC</label><br>"
+                str +="<label for='res2'><input type='radio' name='res' id='res2' value='wrong1'>브라이튼 앤 호브 알비온 FC</label><br>"
+                str +="<label for='res3'><input type='radio' name='res' id='res3' value='wrong2'>아스톤 빌라 FC</label><br>"
+                str +="<label for='res4'><input type='radio' name='res' id='res4' value='wrong3'>리버풀 FC</label><br>"
+                str +="<input type='button' name='next' class='but' value='다음 문제' onclick='buildQuiz8()'>"
+
+                document.getElementById("content").innerHTML = str;
+                } else {
+                document.getElementById("error").innerHTML = "답변을 선택해주세요.";
+            } 
+        }
+
+        function buildQuiz8(){
+            var answerCheck = document.querySelector('input[name="res"]:checked');
+            if(answerCheck){
+                var answerValue = answerCheck.value;
+                if (answerValue == 'answer'){
+                    ans_num++
+                      good()
+                }
+                else{
+                    bad()
+                }
+                document.getElementById("content").innerHTML = "";
+                var str = "";
+                str +="<h1>8. 토트넘 역대 이적료 수입 2위 선수는?</h1>"
+                str +="<hr>"
+                str +="<form name='quizz'>"
+                str +="<label for='res1'><input type='radio' name='res' id='res1' value='wrong1'>가레스 베일</label><br>"
+                str +="<label for='res2'><input type='radio' name='res' id='res2' value='wrong2'>루카 모드리치</label><br>"
+                str +="<label for='res3'><input type='radio' name='res' id='res3' value='wrong3'>마이클 캐릭</label><br>"
+                str +="<label for='res4'><input type='radio' name='res' id='res4' value='answer'>카일 워커</label><br>"
+                str +="<input type='button' name='next' class='but' value='다음 문제' onclick='buildQuiz9()'>"
+
+                document.getElementById("content").innerHTML = str;
+                } else {
+                document.getElementById("error").innerHTML = "답변을 선택해주세요.";
+            } 
+        }
+
+        function buildQuiz9(){
+            var answerCheck = document.querySelector('input[name="res"]:checked');
+            if(answerCheck){
+                var answerValue = answerCheck.value;
+                if (answerValue == 'answer'){
+                    ans_num++
+                      good()
+                }
+                else{
+                    bad()
+                }
+                document.getElementById("content").innerHTML = "";
+            var str = "";
+            str +="<h1>9. 토트넘 역대 이적료 지출 1위 선수는?</h1>"
+            str +="<hr>"
+            str +="<form name='quizz'>"
+            str +="<label for='res1'><input type='radio' name='res' id='res1' value='wrong1'>탕기 은돔벨레</label><br>"
+            str +="<label for='res2'><input type='radio' name='res' id='res2' value='wrong2'>크리스티안 로메로</label><br>"
+            str +="<label for='res3'><input type='radio' name='res' id='res3' value='answer'>히샬리송</label><br>"
+            str +="<label for='res4'><input type='radio' name='res' id='res4' value='wrong3'>에릭 라멜라</label><br>"
+            str +="<input type='button' name='next' class='but' value='다음 문제' onclick='buildQuiz10()'><br>"
+            str +="<div id='error'></div>"
+
+            document.getElementById("content").innerHTML = str;
+        }
+    }
+
+        function buildQuiz10(){
+            var answerCheck = document.querySelector('input[name="res"]:checked');
+            if(answerCheck){
+                var answerValue = answerCheck.value;
+                if (answerValue == 'answer'){
+                    ans_num++
+                      good()
+                }
+                else{
+                    bad()
+                }
+                document.getElementById("content").innerHTML = "";
+            var str = "";
+            str +="<h1>10. 다음 토트넘 소속 선수 중 리그 득점왕을 한 적이 없는 선수는?</h1>"
+            str +="<hr>"
+            str +="<form name='quizz'>"
+            str +="<label for='res1'><input type='radio' name='res' id='res1' value='wrong1'>손흥민</label><br>"
+            str +="<label for='res2'><input type='radio' name='res' id='res2' value='wrong2'>개리 리네커</label><br>"
+            str +="<label for='res3'><input type='radio' name='res' id='res3' value='answer'>저메인 데포</label><br>"
+            str +="<label for='res4'><input type='radio' name='res' id='res4' value='wrong3'>해리 케인</label><br>"
+            str +="<input type='button' name='check' class='but' value='확인' onclick='anwerCheck()'><br>"
+            str +="<div id='error'></div>"
+
+            document.getElementById("content").innerHTML = str;
+        }
+    }
+
+        function anwerCheck(){
+            var answerCheck = document.querySelector('input[name="res"]:checked');
+            if(answerCheck){
+                var answerValue = answerCheck.value;
+                if (answerValue == 'answer'){
+                    ans_num++
+                }
+                document.getElementById("content").innerHTML = "";
+                var str = "";
+                str +="<div class='last'>정답 갯수("
+                str +=ans_num
+                str +="/10)<br>"
+                if(ans_num == 10){
+                    str += "만점입니다!<br>"
+                    str += "토트넘 박사해도 되겠어요!"
+                }
+                else if(ans_num >=7){
+                    str += "토트넘에 관심이 많으시군요!"
+                }
+                else if(ans_num >=4){
+                    str += "축구를 좀 아시는 분이네요!"
+                }
+                else{
+                    str += "더 공부해서 다시 도전하세요!"
+                }
+                ans_num = 0
+                document.getElementById("content").innerHTML = str + "<br><input type='button' name='reset' class='butt' value='다시 도전하기' onclick='buildQuiz1()'></div>"
+                } else {
+                document.getElementById("error").innerHTML = "답변을 선택해주세요.";
+            } 
+
+        }
+
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <a href="index.html"><img src="https://github.com/graphicst/graphicst.github.io/blob/main/tot-logo.png?raw=true" width="200" height="160"></a>
+      </div>
+      <div class="sloganbox">
+        <p class="slogan"><span class="sslo">C</span>OME <span class="sslo">O</span>N <span class="sslo">Y</span>OUR <span
+            class="sslo">S</span>PURS</p>
+      </div>
+    </header>
+
+    <nav>
+      <br>
+      <ul class="menu">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="ranking.html">2022/23 Season</a>
+          <ul class="submenu">
+            <li><a href="ranking.html">구단 순위</a></li>
+            <li><a href="schedule.html">경기 일정</a></li>
+            <li><a href="squad.html">선수단</a></li><br>
+          </ul>
+        </li>
+        <li><a href="club_record.html">Record</a>
+          <ul class="submenu">
+            <li><a href="club_record.html">역대 클럽 성적</a>
+            <li><a href="player_record.html">개인 기록</a></li>
+            <li><a href="rival.html">라이벌 매치</a></li><br>
+          </ul>
+        </li>
+        <li><a href="intro.html">etc</a>
+          <ul class="submenu">
+            <li><a href="intro.html">구단 소개</a></li>
+            <li><a href="quiz.html">퀴즈</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="linkk">
+        <p>
+        <h4>공식 웹사이트</h4>
+        </p><br>
+        <a href="https://www.tottenhamhotspur.com/" target="_blank">
+          <img src="tothomeimg.svg" width="30" height="30"></a>
+        <a href="https://twitter.com/spursofficial" target="_blank">
+          <img src="tottwiimg.svg" width="30" height="30"></a>
+        <a href="https://www.facebook.com/TottenhamHotspur" target="_blank">
+          <img src="totfaceimg.svg" width="30" height="30"></a>
+        <a href="https://www.instagram.com/spursofficial/" target="_blank">
+          <img src="totinsimg.svg" width="30" height="30"></a>
+        <a href="https://www.youtube.com/spursofficial" target="_blank">
+          <img src="totyouimg.svg" width="30" height="30"></a>
+      </div>
+    </nav>
+
+    <section>
+        <div id="content">
+        </div>
+    </section>
+    <script>
+        buildQuiz1()
+    </script>
+    </body>
+    </html>
