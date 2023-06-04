@@ -7,10 +7,25 @@
       type="image/x-icon">
     <link rel="stylesheet" href="totstyle.css">
     <style>
+      .content{
+        width: 1390px;
+        height: 600px;
+      }
       table img:hover {
         box-shadow: 0px 0px 25px yellow,
           0 0 10px red,
           2px 2px 2px black;
+      }
+      label {
+        cursor:pointer;
+      }
+      .aside {
+        position: absolute;
+        bottom: 50px;
+        left : 850px;
+        text-align: right;
+        font-size: 14px;
+        color:rgb(160,160,160);
       }
     </style>
     <script>
@@ -152,7 +167,7 @@
     </nav>
 
     <section>
-
+      <div class="content">
       <div class="highlight">
         <table class="high">
           <tr>
@@ -205,8 +220,18 @@
             </td>
           </tr>
         </table>
-
-      </article>
+    </article>
+    </div>
+    <div class="aside">
+          &lt;자료출처&gt;<br>
+          https://www.tottenhamhotspur.com<br>
+          https://www.premierleague.com/stats<br>
+          https://www.youtube.com/user/SPOTV<br>
+          11v11.com<br>
+          https://en.wikipedia.org<br>
+          namu.wiki<br>
+          본 사이트의 자료는 실제와 오차가 있을 수 있습니다.
+    </div>
     </section>
     <script>
     buildHigh();
@@ -214,7 +239,6 @@
     buildNews();
     setInterval(nextNews,4000);
     </script>
-
   </body>
 
   </html>
