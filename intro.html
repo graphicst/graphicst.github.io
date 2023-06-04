@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
   <html>
 
   <head>
@@ -7,63 +7,110 @@
       type="image/x-icon">
     <link rel="stylesheet" href="totstyle.css">
     <style>
-
-      .intlogo{
-        position: relative;
-        width:500px;
+      .content{
+        width: 1390px;
+        height: 600px;
       }
-
-      .logoo{
+      table img:hover {
+        box-shadow: 0px 0px 25px yellow,
+          0 0 10px red,
+          2px 2px 2px black;
+      }
+      label {
+        cursor:pointer;
+      }
+      .aside {
         position: absolute;
-        top:50px;
-        left:150px;
-        border-style: solid;
-        border-width: 1px;
-        padding:15px;
-      }
-      .int{
-        width:900px;
-        position: relative;
-      }
-      .intt{
-        position: absolute;
-        top:50px;
-        left:30px;
-      }
-      table{
-        font-size: 17px;
-        border-collapse: collapse;
-      }
-      table td{
-        text-align: center;
-        border-style: solid;
-        border-width: 1px;
-        padding:6px;
-      }
-      span{
-        font-weight: bold;
-      }
-      .inttitle{
-        background-color: rgb(0, 0, 120);
-        color:white;
-        font-weight: bold;
-        text-align: center;
-      }
-      .song{
-        position: absolute;
-        top : 520px;
-        left : 80px;
-      }
-      .cap{
-        font-size:20px;
-        font-weight: bold;
-        text-align: left;
-      }
-      .ssong td{
-        border-width:0px;
-        padding : 15px;
+        bottom: 50px;
+        left : 850px;
+        text-align: right;
+        font-size: 14px;
+        color:rgb(160,160,160);
       }
     </style>
+    <script>
+      var highPage = 1;
+      var newsPage = 1;
+
+      function buildHigh(){
+        if(highPage==1){
+          document.getElementById("highPic").innerHTML="<a href='https://www.youtube.com/watch?v=uvb4_rmENys&t=142s' target='_blank'><img src='hi1.png' width='400' height='300' alt='하이라이트'></a>";
+          document.getElementById("highText").innerHTML="<strong>VS 리즈 (05.29)</strong>"
+        }
+        if(highPage==2){
+          document.getElementById("highPic").innerHTML="<a href='https://www.youtube.com/watch?v=-UXEdhDVBhw&t=8s' target='_blank'><img src='hi2.png' width='400' height='300' alt='하이라이트'></a>";
+          document.getElementById("highText").innerHTML="<strong>VS 브렌트 포드 (05.20)</strong>"
+        }
+        if(highPage==3){
+          document.getElementById("highPic").innerHTML="<a href='https://www.youtube.com/watch?v=FRF7f3GUYVY' target='_blank'><img src='hi3.png' width='400' height='300' alt='하이라이트'></a>";
+          document.getElementById("highText").innerHTML="<strong>VS 크리스탈 팰리스 (05.06)</strong>"
+        }
+        if(highPage==4){
+          document.getElementById("highPic").innerHTML="<a href='https://www.youtube.com/watch?v=3zO08Z51CB4' target='_blank'><img src='hi4.png' width='400' height='300' alt='하이라이트'></a>";
+          document.getElementById("highText").innerHTML="<strong>VS 리버풀 (05.01)</strong>"
+        }
+      }
+
+      function prevHigh(){
+        highPage -= 1;
+        if(highPage == 0){
+        highPage =4;
+      }
+        buildHigh();
+      }
+
+      function nextHigh(){
+        highPage += 1;
+        if(highPage == 5){
+        highPage =1;
+      }
+        buildHigh();
+      }
+      
+      function buildNews(){
+        if(newsPage==1){
+          document.getElementById("newsPic1").innerHTML="<a href='https://www.newspim.com/news/view/20230529000001' target='_blank'><img src='art1.png' width='300' height='300'></a>";
+          document.getElementById("newsText1").innerHTML="<strong>손흥민 시즌 6호 도움, 토트넘 최종 8위</strong>"
+          document.getElementById("newsPic2").innerHTML="<a href='https://www.sportalkorea.com/news/view.php?gisa_uniq=2023053008003236&section_code=20&cp=se&sp=A' target='_blank'><img src='art2.png' width='300' height='300'></a>";
+          document.getElementById("newsText2").innerHTML="<strong>해리 케인, EPL 베스트 11 선정</strong>"
+        }
+        if(newsPage==2){
+          document.getElementById("newsPic1").innerHTML="<a href='https://isplus.com/article/view/isp202305300026' target='_blank'><img src='art3.png' width='300' height='300'></a>";
+          document.getElementById("newsText1").innerHTML="<strong>포체티노, 첼시 감독 확정</strong>"
+          document.getElementById("newsPic2").innerHTML="<a href='http://www.fourfourtwo.co.kr/news/articleView.html?idxno=34215' target='_blank'><img src='art4.png' width='300' height='300'></a>";
+          document.getElementById("newsText2").innerHTML="<strong>손흥민, 토트넘 올해의 골 선정</strong>"
+        }
+        if(newsPage==3){
+          document.getElementById("newsPic1").innerHTML="<a href='https://www.segye.com/newsView/20230529506484?OutUrl=naver' target='_blank'><img src='art5.png' width='300' height='300'></a>";
+          document.getElementById("newsText1").innerHTML="<strong>루카스 모우라, 고별경기 원더골</strong>"
+          document.getElementById("newsPic2").innerHTML="<a href='https://newsis.com/view/?id=NISX20230527_0002319138&cID=10523&pID=10500' target='_blank'><img src='art6.png' width='300' height='300'></a>";
+          document.getElementById("newsText2").innerHTML="<strong>토트넘 감독자리, 퇴짜의 연속</strong>"
+        }
+        if(newsPage==4){
+          document.getElementById("newsPic1").innerHTML="<a href='https://www.ytn.co.kr/_ln/0107_201812061030083239' target='_blank'><img src='art7.png' width='300' height='300'></a>";
+          document.getElementById("newsText1").innerHTML="<strong>손흥민 EPL 100호골 달성</strong>"
+          document.getElementById("newsPic2").innerHTML="<a href='https://www.nocutnews.co.kr/news/5804893' target='_blank'><img src='art8.png' width='300' height='300'></a>";
+          document.getElementById("newsText2").innerHTML="<strong>해리케인 EPL 단일팀 최다골 기록</strong>"
+        }
+      }
+
+      function prevNews(){
+        newsPage -= 1;
+        if(newsPage == 0){
+        newsPage =4;
+      }
+        buildNews();
+      }
+
+      function nextNews(){
+        newsPage += 1;
+        if(newsPage == 5){
+        newsPage =1;
+      }
+        buildNews();
+      }
+      
+    </script>
   </head>
 
   <body>
@@ -120,57 +167,78 @@
     </nav>
 
     <section>
-      <div class="intlogo">
-        <img class="logoo" src="logoo.svg" width="300" height="400">
-      </div>
-      <div class="int">
-        <table class="intt">
-          <colgroup>
-            <col style="width:150px;"><col style="width:400px;">
-          </colgroup>
-          <tr><td class="inttitle">정식 명칭</td><td>Tottenham Hotsper Football Club</td></tr>
-          <tr><td class="inttitle">창단</td><td>1882년 9월 5일</td></tr>
-          <tr><td class="inttitle">소속리그</td><td>잉글랜드 프리미어 리그</td></tr>
-          <tr><td class="inttitle">연고지</td><td>잉글랜드 런던 해링게이 구 토트넘</td></tr>
-          <tr><td class="inttitle">홈구장</td><td>토트넘 핫스퍼 스타디움</td></tr>
-          <tr><td class="inttitle">구단주</td><td>조 루이스</td></tr>
-          <tr><td class="inttitle">회장</td><td>다니엘 레비</td></tr>
-          <tr><td class="inttitle">감독</td><td>공석<br>라이언 메이슨(감독 대행)</td></tr>
-          <tr><td class="inttitle">주장</td><td>위고 요리스</td></tr>
-          <tr><td class="inttitle">부주장</td><td>해리 케인</td></tr>
-          <tr><td class="inttitle">역대 한국인 선수</td><td>이영표(2005년-2008년)<br>손흥민(2015년-)</td></tr>
-        </table>
-      </div>
-      <div class="song">
-        <table class="ssong">
-          <tr><td class="cap" clospan="2">응원가</td>
+      <div class="content">
+      <div class="highlight">
+        <table class="high">
           <tr>
-            <td><span>Glory, Glory, Tottenham Hotspur!</span></td>
             <td>
-              <audio controls>
-                <source src="Glory.mp3">
-              </audio>
-            </td>
-            <td><span>손흥민 응원가</span></td>
-            <td>
-              <audio controls>
-                <source src="son.mp3">
-              </audio>
+              <h2><span style="color:white;">손흥민 하이라이트</span></h2>
             </td>
           </tr>
+        </table>
+
+        <table>
           <tr>
-            <td><span>When The Spurs Go Marching In</span></td>
             <td>
-              <audio controls>
-                <source src="When.mp3">
-              </audio>
-            </td>
-            <td><span>케인 응원가</span></td>
-            <td>
-              <audio controls>
-                <source src="kane.mp3">
-              </audio>
+                <span id="highPic"></span>
+                <p style="margin-top:10px; text-align: center;">
+                  <span style="font-size: 15px; color:orangered; margin-right: 30px;"><label onclick="prevHigh()"> ◀ </label></span>
+                  <span id="highText"></span>
+                  <span style="font-size: 15px; color:orangered; margin-left: 30px;"><label onclick="nextHigh()"> ▶ </label></span>
+                </p>
             </td>
           </tr>
         </table>
       </div>
+
+
+      <article>
+        <table class="newstt">
+          <tr>
+            <td>
+              <h2><span style="color:white;">NEWS</span></h2>
+            </td>
+          </tr>
+        </table>
+
+        <table>
+          <tr>
+            <td>
+              <span id="newsPic1" style="margin-right:10px;"></span>
+              <p style="margin-top:10px; text-align: center;">
+                  <span style="font-size: 15px; color:orangered; margin-right: 20px;"><label onclick="prevNews()"> ◀ </label></span>
+                  <span id="newsText1" style="font-size: 15px;"></span>
+                  <span style="margin-left: 20px;">&nbsp;</span>
+                </p>
+            </td>
+            <td>
+              <span id="newsPic2"></span>
+                <p style="margin-top:10px; text-align: center;">
+                  <span style="margin-right: 20px;">&nbsp;</span>
+                  <span id="newsText2"></span>
+                  <span style="font-size: 15px; color:orangered; margin-left: 20px;"><label onclick="nextNews()"> ▶ </label></span></p>
+            </td>
+          </tr>
+        </table>
+    </article>
+    </div>
+    <div class="aside">
+          &lt;자료출처&gt;<br>
+          tottenhamhotspur.com<br>
+          premierleague.com/stats<br>
+          youtube.com/user/SPOTV<br>
+          11v11.com<br>
+          en.wikipedia.org<br>
+          namu.wiki<br>
+          본 사이트의 자료는 실제와 오차가 있을 수 있습니다.
+    </div>
+    </section>
+    <script>
+    buildHigh();
+    setInterval(nextHigh,4000);
+    buildNews();
+    setInterval(nextNews,4000);
+    </script>
+  </body>
+
+  </html>
