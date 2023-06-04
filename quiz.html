@@ -139,10 +139,10 @@
                 str +="<h1>3. 테디 셰링엄의 토트넘 클럽 내 득점왕 횟수는?</h1>"
                 str +="<hr>"
                 str +="<form name='quizz'>"
-                str +="<label for='res1'><input type='radio' name='res' id='res1' value='wrong1'>6</label><br>"
-                str +="<label for='res2'><input type='radio' name='res' id='res2' value='wrong2'>3</label><br>"
-                str +="<label for='res3'><input type='radio' name='res' id='res3' value='answer'>5</label><br>"
-                str +="<label for='res4'><input type='radio' name='res' id='res4' value='wrong3'>9</label><br>"
+                str +="<label for='res1'><input type='radio' name='res' id='res1' value='wrong1'>6회</label><br>"
+                str +="<label for='res2'><input type='radio' name='res' id='res2' value='wrong2'>3회</label><br>"
+                str +="<label for='res3'><input type='radio' name='res' id='res3' value='answer'>5회</label><br>"
+                str +="<label for='res4'><input type='radio' name='res' id='res4' value='wrong3'>9회</label><br>"
                 str +="<input type='button' name='next' class='but' value='다음 문제' onclick='buildQuiz4()'>"
 
                 document.getElementById("content").innerHTML = str;
@@ -358,9 +358,9 @@
                 }
                 document.getElementById("content").innerHTML = "";
                 var str = "";
-                str +="<div class='last'>정답 갯수("
-                str +=ans_num
-                str +="/10)<br>"
+                str +="<div class='last'>정답 수(&nbsp;"
+                str +="<span style='color:red'>" + ans_num +"</span>"
+                str +="/10 )<br>"
                 if(ans_num == 10){
                     str += "만점입니다!<br>"
                     str += "토트넘 박사해도 되겠어요!"
