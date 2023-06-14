@@ -24,75 +24,88 @@
 
   nav,
   section {
-      height: 800px;
-      float: left;
+    height: 800px;
+    float: left;
   }
-
+  
   nav {
-      /* 자식요소에 position : absolute 를 적용하기 위해 부모요소를 relative로 */
-      position: relative;
-      background: rgb(253, 211, 133);
-      width: 200px;
+    position: relative;
+    background: rgb(253, 211, 133);
+    width: 200px;
+    z-index: 1;
   }
-
+  
   .menu {
-      width: 200px;
-      margin: 20px auto;
+    width: 200px;
+    margin: 20px auto;
   }
-
+  
   * {
-      /* ul요소의 기본 마진과 패딩 값 제거 */
-      padding: 0;
-      margin: 0
+    padding: 0;
+    margin: 0;
   }
-
+  
   li {
-      /*list에 점 제거*/
-      list-style: none;
+    list-style: none;
   }
-
-
+  
   a {
-      /*하이퍼 링크 밑줄 제거*/
-      text-decoration: none;
-      font-size: 16px
+    text-decoration: none;
+    font-size: 16px;
   }
-
-  .menu>li {
-      width: 100%;
-      text-align: center;
-      line-height: 60px;
-      background-color: rgb(253, 211, 133);
+  
+  .menu > li {
+    width: 100%;
+    text-align: center;
+    line-height: 60px;
+    background-color: rgb(253, 211, 133);
+    position: relative;
   }
-
+  
   .menu a {
-      color: rgb(123, 123, 255);
-      font-weight: 1000;
+    color: rgb(123, 123, 255);
+    font-weight: 1000;
   }
-
-  .submenu>li {
-      line-height: 50px;
-      background-color: rgb(255, 193, 78);
-  }
-
+  
   .submenu {
-      height: 0;
-      /*ul의 높이를 0으로 해서 submenu의 높이를 없애고*/
-      overflow: hidden;
-      /*내용이 넘어갈 경우 안보이게 처리하는 코드 submenu를 안보이게*/
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: auto;
+    background-color: rgb(255, 193, 78);
+    visibility: hidden;
+    opacity: 0;
+    white-space: nowrap;
+    transition: visibility 0s, opacity 1s;
+  }
+  
+  .menu > li:hover .submenu {
+    display: block;
+  }
+  
+  .submenu > li {
+    padding :0 20px 0 20px;
+    display: inline-block;
+    line-height: 50px;
+    
   }
 
-  .menu>li:hover {
-      background-color: rgb(255, 193, 78);
+  .menu > li:hover .submenu {
+    visibility: visible;
+    opacity: 1;
   }
-
-  .menu>li:hover .submenu {
-      height: 150px;
-      /*서브메뉴 li한개의 높이 50*3*/
-      transition-duration: 1s;
-      /*submenu 나오는데 걸리는 시간*/
+  
+  .submenu-container {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    display: flex;
   }
+  
+  .menu > li:hover .submenu-container {
+    display: flex;
 
+  }
 
   section {
       position: relative;
